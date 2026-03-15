@@ -567,6 +567,18 @@ class ChatHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(HTML_PAGE.encode('utf-8'))
 
+        elif self.path == '/insights' or self.path == '/insights.html':
+            # 群眾洞見頁面
+            insights_file = BASE / 'public' / 'insights.html'
+            if insights_file.exists():
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/html; charset=utf-8')
+                self.end_headers()
+                self.wfile.write(insights_file.read_bytes())
+            else:
+                self.send_response(404)
+                self.end_headers()
+
         elif self.path == '/api/insights':
             # 公開端點：所有人的洞見（匿名）
             insights = []

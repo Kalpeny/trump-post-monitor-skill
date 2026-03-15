@@ -877,5 +877,53 @@
     refresh();
     setInterval(refresh, REFRESH_INTERVAL);
   </script>
+
+  <!-- 浮動聊天按鈕 -->
+  <style>
+    .chat-fab {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: linear-gradient(135deg, #d4a017, #b8860b);
+      color: #000; border: none; cursor: pointer;
+      font-size: 28px; box-shadow: 0 4px 16px rgba(212,160,23,0.4);
+      z-index: 1000; transition: transform 0.2s;
+    }
+    .chat-fab:hover { transform: scale(1.1); }
+    .chat-popup {
+      display: none; position: fixed; bottom: 96px; right: 24px;
+      width: 380px; max-width: 90vw; height: 500px; max-height: 60vh;
+      background: #111; border: 1px solid #333; border-radius: 16px;
+      z-index: 1001; flex-direction: column; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    }
+    .chat-popup.open { display: flex; }
+    .chat-popup iframe {
+      flex: 1; border: none; border-radius: 0 0 16px 16px;
+    }
+    .chat-header {
+      padding: 12px 16px; background: #1a1a2e;
+      border-bottom: 1px solid #333; display: flex;
+      justify-content: space-between; align-items: center;
+      border-radius: 16px 16px 0 0;
+    }
+    .chat-header span { color: #ffd700; font-weight: bold; font-size: 14px; }
+    .chat-header button {
+      background: none; border: none; color: #888; font-size: 20px; cursor: pointer;
+    }
+  </style>
+
+  <button class="chat-fab" onclick="toggleChat()" title="跟川普密碼聊天">💬</button>
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+      <span>💬 川普密碼 AI 助手</span>
+      <button onclick="toggleChat()">✕</button>
+    </div>
+    <iframe src="/"></iframe>
+  </div>
+  <script>
+    function toggleChat() {
+      document.getElementById('chatPopup').classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
