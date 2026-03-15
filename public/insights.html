@@ -119,41 +119,38 @@ tr:hover{background:rgba(255,215,0,0.03)}
 
   <!-- 運算漏斗 -->
   <div style="max-width:740px;margin:28px auto 0;padding:0 20px">
-    <!-- 漏斗：從 7400 到 550 -->
-    <div style="display:flex;flex-direction:column;align-items:center;gap:2px">
-      <div style="width:100%;background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.15);border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;align-items:center">
-        <span style="color:var(--dim);font-size:12px">Raw Posts 原始推文</span>
-        <span style="color:var(--gold);font-size:20px;font-weight:800">7,400+</span>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      <div style="width:100%;background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(204,0,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:10px;padding:14px 24px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:14px">📝 Raw Posts 原始推文</span>
+        <span style="color:var(--gold);font-size:24px;font-weight:800">7,400+</span>
       </div>
-      <div style="color:var(--dim);font-size:10px">▼ 拆解成 316 個特徵 ▼</div>
-      <div style="width:85%;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.12);border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;align-items:center">
-        <span style="color:var(--dim);font-size:12px">Models Tested 跑過的模型</span>
-        <span style="color:var(--gold);font-size:20px;font-weight:800">31,554,180</span>
+      <span style="color:var(--gold);font-size:13px">▼ 316 features 特徵 ▼</span>
+      <div style="width:80%;background:linear-gradient(135deg,rgba(255,215,0,0.1),rgba(68,136,255,0.08));border:1px solid rgba(255,215,0,0.2);border-radius:10px;padding:14px 24px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:14px">🔬 Models Tested 測試模型</span>
+        <span style="color:var(--gold);font-size:24px;font-weight:800">31,554,180</span>
       </div>
-      <div style="color:var(--dim);font-size:10px">▼ 雙段驗證淘汰 99.84% ▼</div>
-      <div style="width:65%;background:rgba(255,215,0,0.04);border:1px solid rgba(255,215,0,0.1);border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;align-items:center">
-        <span style="color:var(--dim);font-size:12px">Survivors 存活 + 進化</span>
-        <span style="color:var(--gold);font-size:20px;font-weight:800">550</span>
+      <span style="color:var(--red);font-size:13px">▼ 99.84% eliminated 淘汰 ▼</span>
+      <div style="width:55%;background:linear-gradient(135deg,rgba(68,204,102,0.12),rgba(255,215,0,0.08));border:2px solid var(--green);border-radius:10px;padding:14px 24px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:14px">✅ Survivors 存活</span>
+        <span style="color:var(--green);font-size:28px;font-weight:800">550</span>
       </div>
     </div>
-
-    <!-- 精彩發現（不用清單，用亮點卡片） -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:20px">
-      <div style="background:var(--card);border-radius:8px;padding:14px;text-align:center">
-        <div style="color:var(--green);font-size:22px;font-weight:800">+1.12%</div>
-        <div style="color:var(--dim);font-size:11px;margin-top:4px">盤前說「暫緩」<br>Pre-market RELIEF<br>→ S&P 當天平均漲幅</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px">
+      <div style="background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--green);border-radius:10px;padding:16px;text-align:center">
+        <div style="color:var(--green);font-size:26px;font-weight:800">+1.12%</div>
+        <div style="color:var(--dim);font-size:12px;margin-top:6px">盤前「暫緩」→ S&P 漲<br>Pre-market RELIEF</div>
       </div>
-      <div style="background:var(--card);border-radius:8px;padding:14px;text-align:center">
-        <div style="color:var(--gold);font-size:22px;font-weight:800">17.4h</div>
-        <div style="color:var(--dim);font-size:11px;margin-top:4px">關稅→Deal 轉折間隔<br>Tariff → Deal median<br>從威脅到讓步的時間</div>
+      <div style="background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--gold);border-radius:10px;padding:16px;text-align:center">
+        <div style="color:var(--gold);font-size:26px;font-weight:800">17.4h</div>
+        <div style="color:var(--dim);font-size:12px;margin-top:6px">關稅→Deal 轉折<br>Tariff → Deal gap</div>
       </div>
-      <div style="background:var(--card);border-radius:8px;padding:14px;text-align:center">
-        <div style="color:var(--red);font-size:22px;font-weight:800">反直覺</div>
-        <div style="color:var(--dim);font-size:11px;margin-top:4px">大跌前語氣更正面<br>More positive before crash<br>像在安撫市場</div>
+      <div style="background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--red);border-radius:10px;padding:16px;text-align:center">
+        <div style="color:var(--red);font-size:26px;font-weight:800">⚠️</div>
+        <div style="color:var(--dim);font-size:12px;margin-top:6px">大跌前語氣反而正面<br>Positive before crash</div>
       </div>
-      <div style="background:var(--card);border-radius:8px;padding:14px;text-align:center">
-        <div style="color:var(--gold);font-size:22px;font-weight:800">2025-08</div>
-        <div style="color:var(--dim);font-size:11px;margin-top:4px">偷換簽名格式<br>Signature change detected<br>密碼換碼被我們抓到</div>
+      <div style="background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--blue);border-radius:10px;padding:16px;text-align:center">
+        <div style="color:var(--blue);font-size:26px;font-weight:800">🔍</div>
+        <div style="color:var(--dim);font-size:12px;margin-top:6px">2025-08 偷換簽名<br>Code change detected</div>
       </div>
     </div>
   </div>
@@ -169,6 +166,40 @@ tr:hover{background:rgba(255,215,0,0.03)}
     <div class="scard"><div class="l">Posts 推文 投稿</div><div class="v" id="s-posts">--</div><div class="l" id="s-posts2"></div></div>
     <div class="scard"><div class="l">Trend 趨勢 トレンド</div><div class="v" id="s-dir">--</div><div class="l" id="s-dir2"></div></div>
     <div class="scard"><div class="l">Hit Rate 命中率</div><div class="v" id="s-vix" style="color:var(--gold)">61.3%</div><div class="l" id="s-vix2">z=5.39 統計顯著</div></div>
+  </div>
+</div>
+
+<!-- 三套劇本 -->
+<div class="section">
+  <h2>🎯 Three Playbooks 三套劇本 3つの戦略</h2>
+  <div class="plays">
+    <div class="play">
+      <h3>🛡️ Hedge 避險 ヘッジ</h3>
+      <table>
+        <tr><td>Pure Tariff 純關稅</td><td style="color:var(--red)">-1.057%</td><td style="color:var(--dim)">50% ↑</td></tr>
+        <tr><td>Attack 攻擊</td><td style="color:var(--red)">+0.159%</td><td style="color:var(--dim)">vs +0.244%</td></tr>
+        <tr><td>Threat 威脅</td><td style="color:var(--red)">+0.125%</td><td style="color:var(--dim)">vs +0.231%</td></tr>
+      </table>
+      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">他罵人=他在焦慮=小心<br>彼が怒る=不安=注意</div>
+    </div>
+    <div class="play">
+      <h3>📊 Position 佈局 ポジション</h3>
+      <table>
+        <tr><td>D+M+R+T 四信號</td><td style="color:var(--green)">+2.792%</td><td style="color:var(--dim)">66.7% ↑</td></tr>
+        <tr><td>A+D 先攻再談</td><td style="color:var(--green)">+0.586%</td><td style="color:var(--dim)">65.2% ↑</td></tr>
+        <tr><td>A+T 攻擊+關稅</td><td style="color:var(--green)">+0.574%</td><td style="color:var(--dim)">72.7% ↑</td></tr>
+      </table>
+      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">先打再談=典型 Trump 談判術<br>攻撃→交渉=トランプ流</div>
+    </div>
+    <div class="play">
+      <h3>🚀 Pump 拉盤 ポンプ</h3>
+      <table>
+        <tr><td>Silence 閉嘴</td><td style="color:var(--green)">+0.409%</td><td style="color:var(--dim)">80.0% ↑</td></tr>
+        <tr><td>Brag Only 炫耀</td><td style="color:var(--green)">+0.520%</td><td style="color:var(--dim)">71.4% ↑</td></tr>
+        <tr><td>Action 行動</td><td style="color:var(--green)">+0.294%</td><td style="color:var(--dim)">有實際行動</td></tr>
+      </table>
+      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">心情好才用 X=做多<br>機嫌が良い時Xを使う=ロング</div>
+    </div>
   </div>
 </div>
 
@@ -214,6 +245,42 @@ tr:hover{background:rgba(255,215,0,0.03)}
   </div>
 </div>
 
+<!-- 雙平台 -->
+<div class="section">
+  <h2>🔐 Dual Platform TS vs X 雙平台密碼</h2>
+  <div style="overflow-x:auto;margin-bottom:16px">
+  <table>
+    <thead><tr><th>#</th><th>Code 密碼</th><th>Data 數據</th><th>Meaning 意義</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td style="color:var(--gold)">🇨🇳 China = Hidden 完全隱藏</td><td>TS: 203 篇 / X: 0 篇</td><td>中國信號加權 ×1.5（刻意隱藏=更真實）</td></tr>
+      <tr><td>2</td><td>⏱️ TS→X 延遲 6.2 小時</td><td>38/39 篇 TS 先發</td><td>6 小時操作窗口（63% 偏漲）</td></tr>
+      <tr><td>3</td><td>📈 窗口內正報酬 63%</td><td>TS 發文 → X 轉貼之間</td><td>窗口內做多有優勢</td></tr>
+      <tr><td>4</td><td style="color:var(--green)">X 推文隔天報酬高 7 倍</td><td>X: +0.252% vs TS-only: +0.037%</td><td>X 出現 = 確認信號，報酬更高</td></tr>
+      <tr><td>5</td><td>X 使用率和市場正相關</td><td>相關係數 0.35</td><td>市場好時他比較常用 X（心情指標）</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div style="background:rgba(255,215,0,0.05);border:1px solid rgba(255,215,0,0.2);border-radius:10px;padding:14px;font-size:14px;color:var(--dim)">
+    <strong style="color:var(--gold)">核心結論 Core Insight コア・インサイト：</strong><br>
+    Truth Social 是政策信號源（預測用），X 是形象窗口（確認用）。<br>
+    TS = policy signal source (prediction), X = image window (confirmation).<br>
+    先在 TS 說，6 小時後才放 X。這 6 小時就是操作窗口。
+  </div>
+</div>
+
+<!-- 最近信號 + 結果 -->
+<div class="section" id="signals">
+  <h2>📡 Signals & Results 信號與結果 シグナルと結果</h2>
+  <p style="color:var(--dim);font-size:13px;margin-bottom:12px">每個信號偵測後，追蹤預測市場和美股的實際反應 Each signal tracked against PM + S&P 500</p>
+  <div id="signal-area" style="min-height:60px"><span style="color:var(--dim)">Loading...</span></div>
+</div>
+
+<!-- 模型排行 -->
+<div class="section" id="rankings">
+  <h2>🏆 Model Rankings 模型排行榜 モデルランキング</h2>
+  <div style="overflow-x:auto" id="model-area"><span style="color:var(--dim)">Loading...</span></div>
+</div>
+
 <!-- 架構圖 -->
 <div class="section">
   <h2>🏗️ Architecture 系統架構 アーキテクチャ</h2>
@@ -253,75 +320,6 @@ Trump 發推文 Truth Social
 </div>
 
 
-<!-- 最近信號 -->
-<div class="section" id="signals">
-  <h2>📡 Recent Signals 最近信號 直近シグナル</h2>
-  <div id="signal-area" style="min-height:60px"><span style="color:var(--dim)">Loading...</span></div>
-</div>
-
-<!-- 模型排行 -->
-<div class="section" id="rankings">
-  <h2>🏆 Model Rankings 模型排行榜 モデルランキング</h2>
-  <div style="overflow-x:auto" id="model-area"><span style="color:var(--dim)">Loading...</span></div>
-</div>
-
-<!-- 三套劇本 -->
-<div class="section">
-  <h2>🎯 Three Playbooks 三套劇本 3つの戦略</h2>
-  <div class="plays">
-    <div class="play">
-      <h3>🛡️ Hedge 避險 ヘッジ</h3>
-      <table>
-        <tr><td>Pure Tariff 純關稅</td><td style="color:var(--red)">-1.057%</td><td style="color:var(--dim)">50% ↑</td></tr>
-        <tr><td>Attack 攻擊</td><td style="color:var(--red)">+0.159%</td><td style="color:var(--dim)">vs +0.244%</td></tr>
-        <tr><td>Threat 威脅</td><td style="color:var(--red)">+0.125%</td><td style="color:var(--dim)">vs +0.231%</td></tr>
-      </table>
-      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">他罵人=他在焦慮=小心<br>彼が怒る=不安=注意</div>
-    </div>
-    <div class="play">
-      <h3>📊 Position 佈局 ポジション</h3>
-      <table>
-        <tr><td>D+M+R+T 四信號</td><td style="color:var(--green)">+2.792%</td><td style="color:var(--dim)">66.7% ↑</td></tr>
-        <tr><td>A+D 先攻再談</td><td style="color:var(--green)">+0.586%</td><td style="color:var(--dim)">65.2% ↑</td></tr>
-        <tr><td>A+T 攻擊+關稅</td><td style="color:var(--green)">+0.574%</td><td style="color:var(--dim)">72.7% ↑</td></tr>
-      </table>
-      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">先打再談=典型 Trump 談判術<br>攻撃→交渉=トランプ流</div>
-    </div>
-    <div class="play">
-      <h3>🚀 Pump 拉盤 ポンプ</h3>
-      <table>
-        <tr><td>Silence 閉嘴</td><td style="color:var(--green)">+0.409%</td><td style="color:var(--dim)">80.0% ↑</td></tr>
-        <tr><td>Brag Only 炫耀</td><td style="color:var(--green)">+0.520%</td><td style="color:var(--dim)">71.4% ↑</td></tr>
-        <tr><td>Action 行動</td><td style="color:var(--green)">+0.294%</td><td style="color:var(--dim)">有實際行動</td></tr>
-      </table>
-      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">心情好才用 X=做多<br>機嫌が良い時Xを使う=ロング</div>
-    </div>
-  </div>
-</div>
-
-<!-- 雙平台 -->
-<div class="section">
-  <h2>🔐 Dual Platform TS vs X 雙平台密碼</h2>
-  <div style="overflow-x:auto;margin-bottom:16px">
-  <table>
-    <thead><tr><th>#</th><th>Code 密碼</th><th>Data 數據</th><th>Meaning 意義</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td style="color:var(--gold)">🇨🇳 China = Hidden 完全隱藏</td><td>TS: 203 篇 / X: 0 篇</td><td>中國信號加權 ×1.5（刻意隱藏=更真實）</td></tr>
-      <tr><td>2</td><td>⏱️ TS→X 延遲 6.2 小時</td><td>38/39 篇 TS 先發</td><td>6 小時操作窗口（63% 偏漲）</td></tr>
-      <tr><td>3</td><td>📈 窗口內正報酬 63%</td><td>TS 發文 → X 轉貼之間</td><td>窗口內做多有優勢</td></tr>
-      <tr><td>4</td><td style="color:var(--green)">X 推文隔天報酬高 7 倍</td><td>X: +0.252% vs TS-only: +0.037%</td><td>X 出現 = 確認信號，報酬更高</td></tr>
-      <tr><td>5</td><td>X 使用率和市場正相關</td><td>相關係數 0.35</td><td>市場好時他比較常用 X（心情指標）</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <div style="background:rgba(255,215,0,0.05);border:1px solid rgba(255,215,0,0.2);border-radius:10px;padding:14px;font-size:14px;color:var(--dim)">
-    <strong style="color:var(--gold)">核心結論 Core Insight コア・インサイト：</strong><br>
-    Truth Social 是政策信號源（預測用），X 是形象窗口（確認用）。<br>
-    TS = policy signal source (prediction), X = image window (confirmation).<br>
-    先在 TS 說，6 小時後才放 X。這 6 小時就是操作窗口。
-  </div>
-</div>
-
 <!-- 預測市場 -->
 <div class="section">
   <h2>🔗 Prediction Markets 預測市場 予測市場</h2>
@@ -329,17 +327,6 @@ Trump 發推文 Truth Social
     <div class="pcard"><div class="name">Polymarket</div><div class="detail">$56B volume 交易量<br>✅ Real-time prices 即時價格<br>Signal-based arbitrage 信號套利</div></div>
     <div class="pcard"><div class="name">Kalshi</div><div class="detail">$44B volume 交易量<br>✅ Cross-platform spread 跨平台價差<br>CFTC regulated 受監管</div></div>
     <div class="pcard"><div class="name">Truth Predict</div><div class="detail">Trump's own platform 自建<br>⏳ Pending launch 等上線<br>Crypto.com partnership</div></div>
-  </div>
-</div>
-
-<!-- 群眾洞見 -->
-<div class="section">
-  <h2>💡 Crowd Insights 群眾洞見 クラウド・インサイト</h2>
-  <div id="crowd-area" style="min-height:40px">
-    <div style="color:var(--dim);padding:20px;text-align:center;background:var(--card);border-radius:12px">
-      No insights yet / 還沒有群眾洞見 / まだインサイトなし<br>
-      <small>按右下角 💬 分享你的交易邏輯！</small>
-    </div>
   </div>
 </div>
 
@@ -374,6 +361,17 @@ Trump 發推文 Truth Social
         <span style="font-size:15px;font-weight:600">Breaker 斷路器</span>
       </div>
       <div style="font-size:14px;color:var(--dim)">跟隨機比 z=5.39 ✅<br>惡化偵測 50%vs61% 🟡<br>3 個反指標已翻轉</div>
+    </div>
+  </div>
+</div>
+
+<!-- 群眾洞見 -->
+<div class="section">
+  <h2>💡 Crowd Insights 群眾洞見 クラウド・インサイト</h2>
+  <div id="crowd-area" style="min-height:40px">
+    <div style="color:var(--dim);padding:20px;text-align:center;background:var(--card);border-radius:12px">
+      No insights yet / 還沒有群眾洞見 / まだインサイトなし<br>
+      <small>按右下角 💬 分享你的交易邏輯！</small>
     </div>
   </div>
 </div>
@@ -496,7 +494,22 @@ async function load(){
     let html = '';
     const sorted = Object.entries(days).sort((a,b)=>b[0].localeCompare(a[0]));
     sorted.forEach(([date,sigs])=>{
-      html += '<div style="margin-bottom:12px"><div style="font-size:13px;color:var(--dim);margin-bottom:6px">'+esc(date)+'</div><div style="display:flex;flex-wrap:wrap;gap:4px">';
+      // 算當天信號的方向暗示
+      let bullish = 0, bearish = 0;
+      sigs.forEach(s=>{
+        if(['DEAL','RELIEF','BULLISH','ACTION','MARKET_BRAG'].includes(s.type)) bullish += s.count;
+        if(['TARIFF','THREAT','BEARISH','ATTACK'].includes(s.type)) bearish += s.count;
+      });
+      const direction = bullish > bearish ? '📈' : bearish > bullish ? '📉' : '➡️';
+      const dirText = bullish > bearish ? 'Bullish 偏多' : bearish > bullish ? 'Bearish 偏空' : 'Mixed 混合';
+      const dirColor = bullish > bearish ? 'var(--green)' : bearish > bullish ? 'var(--red)' : 'var(--dim)';
+
+      html += '<div style="margin-bottom:14px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">';
+      html += '<span style="font-size:14px;font-weight:600">'+esc(date)+'</span>';
+      html += '<span style="color:'+dirColor+';font-size:14px;font-weight:700">'+direction+' '+dirText+' (+'+ bullish+' -'+bearish+')</span>';
+      html += '</div>';
+      html += '<div style="display:flex;flex-wrap:wrap;gap:6px">';
       sigs.forEach(s=>{
         html += '<span class="sig active">'+(labels[s.type]||s.type)+' ×'+s.count+'</span>';
       });
