@@ -1,7 +1,119 @@
 {
   "date": "2026-03-15",
-  "prepared_at": "2026-03-15T04:53:56Z",
+  "prepared_at": "2026-03-15T14:28:44Z",
   "status": "PENDING",
+  "today_posts": {
+    "count": 11,
+    "latest": "McLaughlin: Strong Majority Backs Trump in Stopping Iran's Nuclear Ambitions: https://www.newsmax.com/mclaughlin/cable-nuclear-weapons/2026/03/12/id/1249304/",
+    "earliest_time": "2026-03-14T00:11:20.531Z",
+    "latest_time": "2026-03-14T19:25:39.030Z",
+    "sample": [
+      {
+        "time": "00:11",
+        "text": "Trump honors Virginia mom, farmer at White House Women's History Month event: https://wjla.com/news/local/president-donald-trump-honors-virginia-mom-farmer-white-house-womens-history-month-event-first-agriculture-working-mothers-contributions-lady-melania-trump-brooke-farms-llc-mult-generational-far"
+      },
+      {
+        "time": "00:12",
+        "text": "US Olympic bobsledder surprises Trump, awards him prestigious Order of Ikkos medal: https://nypost.com/2026/03/12/us-news/trump-awarded-prestigious-order-of-ikkos-medal-by-us-olympian-bobsledder/"
+      },
+      {
+        "time": "00:12",
+        "text": "Trump Investment Surge: Trillions Pour Into America As Economic Revival Accelerates: https://thenevadaglobe.com/articles/trump-investment-surge-trillions-pour-into-america-as-economic-revival-accelerates/"
+      },
+      {
+        "time": "00:12",
+        "text": "Kevin Hern, from the Wonderful State of Oklahoma (where I won all 77 out of 77 Counties, in 2016, 2020, and 2024!), is a Great Patriot, and FANTASTIC Congressman! A true friend of MAGA, Kevin is now running for the United States Senate, where I know he will continue to do an incredible job. Kevin is"
+      },
+      {
+        "time": "03:53",
+        "text": "The Fake News Media hates to report how well the United States Military has done against Iran, which is totally defeated and wants a deal - But not a deal that I would accept! Thank you for your attention to this matter. President DJT"
+      },
+      {
+        "time": "12:08",
+        "text": "Thank you to Johnny Jones and all of our GREAT TSA Agents who are going to work but not being paid because the Radical Left Democrats refuse to honor the deal that was approved and voted on in Congress. They want your money to go to \"Border Criminals, Murderers, foreign Drug Dealers, and some of the"
+      },
+      {
+        "time": "13:35",
+        "text": "Yet again, an intentionally misleading headline by the Fake News Media about the five tanker planes that were supposedly struck down at an Airport in Saudi Arabia, and of no further use. In actuality, the Base was hit a few days ago, but the planes were not \"struck\" or \"destroyed.\" Four of the five "
+      },
+      {
+        "time": "14:04",
+        "text": "Many Countries, especially those who are affected by Iran's attempted closure of the Hormuz Strait, will be sending War Ships, in conjunction with the United States of America, to keep the Strait open and safe. We have already destroyed 100% of Iran's Military capability, but it's easy for them to s"
+      },
+      {
+        "time": "18:58",
+        "text": "The United States of America has beaten and completely decimated Iran, both Militarily, Economically, and in every other way, but the Countries of the World that receive Oil through the Hormuz Strait must take care of that passage, and we will help — A LOT! The U.S. will also coordinate with those C"
+      },
+      {
+        "time": "19:25",
+        "text": "McLaughlin: Strong Majority Backs Trump in Stopping Iran's Nuclear Ambitions: https://www.newsmax.com/mclaughlin/cable-nuclear-weapons/2026/03/12/id/1249304/"
+      }
+    ]
+  },
+  "keyword_signals": [
+    "DEAL",
+    "CHINA",
+    "IRAN",
+    "DEAL_ONLY"
+  ],
+  "today_features": {
+    "posts_11_20": true,
+    "avg_len_long": true,
+    "caps_low": true,
+    "excl_normal": true,
+    "questions_no": true,
+    "has_night": true,
+    "heavy_night": true,
+    "kw_deal": true,
+    "kw_deal_2plus": true,
+    "pre_deal": true,
+    "kw_china": true,
+    "open_china": true,
+    "kw_japan": true,
+    "open_japan": true,
+    "kw_iran": true,
+    "kw_iran_2plus": true,
+    "open_iran": true,
+    "kw_korea": true,
+    "open_korea": true,
+    "kw_saudi": true,
+    "open_saudi": true,
+    "kw_dow": true,
+    "kw_dow_2plus": true,
+    "open_dow": true,
+    "kw_economy": true,
+    "kw_oil": true,
+    "open_oil": true,
+    "kw_energy": true,
+    "kw_trillion": true,
+    "kw_great": true,
+    "kw_great_2plus": true,
+    "pre_great": true,
+    "open_great": true,
+    "kw_tremendous": true,
+    "kw_incredible": true,
+    "kw_amazing": true,
+    "kw_fantastic": true,
+    "kw_wonderful": true,
+    "kw_fake": true,
+    "kw_fake_2plus": true,
+    "open_fake": true,
+    "kw_terrible": true,
+    "open_terrible": true,
+    "kw_worst": true,
+    "pre_worst": true,
+    "kw_maga": true,
+    "kw_america_first": true,
+    "kw_president_djt": true,
+    "kw_president_djt_2plus": true,
+    "pre_president_djt": true,
+    "kw_thank_you_for_your_attention": true,
+    "kw_never_let_you_down": true,
+    "kw_complete_and_total": true,
+    "is_weekend": true,
+    "deal_without_tariff": true,
+    "deal_no_tariff": true
+  },
   "model_performance": {
     "A1_tariff_bearish": {
       "name": "盤中關稅→隔天跌",
@@ -111,16 +223,15 @@
   "evolution_latest": {
     "date": "2026-03-15",
     "crossover": 16,
-    "mutation": 12,
-    "distill": 18,
-    "total_new": 46,
-    "total_rules_after": 546,
+    "mutation": 16,
+    "distill": 17,
+    "total_new": 49,
+    "total_rules_after": 600,
     "top_3": [
       {
         "features": [
-          "kw_interest_rate",
-          "kw_thank_you_for_your_attention",
-          "kw_economy"
+          "kw_energy",
+          "kw_interest_rate"
         ],
         "direction": "LONG",
         "hold": 3,
@@ -130,7 +241,7 @@
       {
         "features": [
           "kw_interest_rate",
-          "kw_dow_2plus"
+          "kw_energy"
         ],
         "direction": "LONG",
         "hold": 3,
@@ -139,23 +250,22 @@
       },
       {
         "features": [
-          "kw_deal",
-          "kw_beautiful",
-          "volume_falling_3d"
+          "is_friday",
+          "kw_tariffs_2plus"
         ],
         "direction": "LONG",
         "hold": 3,
-        "score": 94.4,
-        "origin": "crossover"
+        "score": 93.8,
+        "origin": "distilled"
       }
     ]
   },
   "signal_confidence": {
     "TARIFF": 0.7,
-    "DEAL": 0.65,
-    "RELIEF": 0.7,
-    "ACTION": 0.776,
-    "THREAT": 0.55,
+    "DEAL": 0.55,
+    "RELIEF": 0.9,
+    "ACTION": 0.802,
+    "THREAT": 0.6,
     "CHINA": 0.6,
     "IRAN": 0.55,
     "TARIFF_ONLY": 0.7,

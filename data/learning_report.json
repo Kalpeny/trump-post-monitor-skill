@@ -1,6 +1,6 @@
 {
   "date": "2026-03-15",
-  "generated_at": "2026-03-15T06:49:16Z",
+  "generated_at": "2026-03-15T14:28:44Z",
   "total_models": 11,
   "total_verified": 564,
   "ranking": [
@@ -218,16 +218,16 @@
       {
         "date": "2026-03-15",
         "signal": "ACTION",
-        "old_confidence": 0.776,
-        "new_confidence": 0.789,
+        "old_confidence": 0.789,
+        "new_confidence": 0.802,
         "hit_rate": 62.6,
         "samples": 423
       },
       {
         "date": "2026-03-15",
         "signal": "RELIEF",
-        "old_confidence": 0.8,
-        "new_confidence": 0.85,
+        "old_confidence": 0.85,
+        "new_confidence": 0.9,
         "hit_rate": 72.7,
         "samples": 11
       }
