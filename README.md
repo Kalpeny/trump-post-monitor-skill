@@ -31,15 +31,99 @@
 Data:     37,000+ Truth Social posts (3 independent sources, cross-verified)
           7,411 post-inauguration originals
           289 S&P 500 / NASDAQ / VIX trading days
+          564 verified predictions, 61.3% hit rate (z=5.39, p<0.05)
 
-Engine:   316 binary features per day
+Engine:   384 features per day
           31,554,180 prediction models tested
-          50,872 survived two-stage validation (0.16%)
+          546 active rules (brute-force survivors + evolved rules)
+          11 named strategy models + AI-generated rules
 
-Live:     Daily automated pipeline on VPS
-          3-Source Fetch → Cross-Verify → Deletion Detection →
-          Feature Extraction → 50K Model Scan → Predict → Report → GitHub Sync
+AI:       Claude Opus (deep analysis) + Gemini Flash (public chatbot)
+          Closed-loop: predict → verify → learn → evolve → repeat
+          3-tier event detection: single post → multi-day pattern → dual-platform
+
+Markets:  Polymarket + Kalshi real-time price tracking
+          Dual-track: prediction market + S&P 500 simultaneously
+          6-hour TS→X arbitrage window (63% bullish historically)
+
+Connect:  MCP Server (9 tools) · CLI (8 commands) · JSON API · Chatbot
 ```
+
+---
+
+## 🧠 System Architecture
+
+```
+Trump posts on Truth Social
+         │
+         ▼
+┌─────────────────────────────────────────────────────┐
+│  Real-Time Engine (every 5 min)                      │
+│  Detect → Classify → Dual-Platform Boost →           │
+│  Event Pattern Check → Snapshot PM + SPY →            │
+│  Predict → Track 1h/3h/6h → Learn                    │
+└─────────────────────────┬───────────────────────────┘
+                          │
+┌─────────────────────────┼───────────────────────────┐
+│  Daily Pipeline (11 steps)                           │
+│  Fetch → Analyze → Predict → Verify →                │
+│  Circuit Breaker → PM Feedback → Learn →             │
+│  Evolve (crossover/mutation/distill) →                │
+│  Opus Briefing → Sync                                │
+└─────────────────────────┬───────────────────────────┘
+                          │
+┌─────────────────────────┼───────────────────────────┐
+│  Three Brains                                        │
+│  🧠 Opus: deep causal analysis (local, no API cost)  │
+│  🧬 Evolver: breeds new rules from survivors         │
+│  🔒 Circuit Breaker: stops if everything is wrong    │
+└─────────────────────────────────────────────────────┘
+```
+
+## 🔑 Key Discoveries (from data, not assumptions)
+
+| # | Discovery | Evidence | Action |
+|---|-----------|----------|--------|
+| 1 | **RELIEF is the strongest signal** | Apr 9: +9.52% (largest single-day gain) | Confidence boosted to 0.80 |
+| 2 | **TARIFF→SHORT is 70% WRONG** | Circuit breaker found this | Auto-reduced TARIFF weight |
+| 3 | **China signals are hidden** | 203 posts on TS, 0 on X | China signals get 1.5x boost |
+| 4 | **TS→X delay = 6.2 hours** | 38/39 matched posts, TS first | 6-hour trading window (63% up) |
+| 5 | **Pre-event tariff signals = 2.7x normal** | 288 trading days analyzed | Event detector watches multi-day patterns |
+| 6 | **Volume spike (131 posts/day) = crash incoming** | Mar 10: -2.70% | Volume spike alert system |
+| 7 | **System is degrading** | Recent 50% vs historical 61% | Circuit breaker monitoring |
+| 8 | **Errors are data too** | 3 invalid combos found from failures | Elimination learning |
+
+## 📊 Model Leaderboard (564 verified predictions)
+
+| Rank | Model | Win Rate | Avg Return | Trades | Status |
+|------|-------|----------|------------|--------|--------|
+| ⭐1 | A3 盤前 RELIEF→當天飆 | 72.7% | +1.206% | 11 | Active |
+| ⭐2 | D3 發文量暴增→恐慌底部 | 70.2% | +0.306% | 47 | Boosted |
+| ⭐3 | D2 簽名切換→正式聲明 | 70.0% | +0.472% | 80 | Boosted |
+| 4 | B3 盤前 ACTION+正面情緒 | 66.7% | +0.199% | 33 | Active |
+| 5 | C1 轟炸→沉默→做多 | 65.3% | +0.145% | 176 | Fixed (sentiment filter) |
+| 6 | B1 三信號齊發→買3天 | 64.7% | +0.597% | 17 | Active |
+| ⚠️ | A2 DEAL→隔天漲 | 52.2% | +0.029% | 90 | Demoted |
+| ⚠️ | C2 炫耀股市→到頂 | 45.0% | +0.105% | 60 | Eliminate recommended |
+| 🗑️ | C3 深夜關稅→跳空 | 37.5% | -0.414% | 8 | Eliminated (anti-indicator!) |
+
+## 🔗 Prediction Markets
+
+| Platform | Volume | Status | Integration |
+|----------|--------|--------|-------------|
+| **Polymarket** | $56B | ✅ Live | Real-time prices, signal-based arbitrage |
+| **Kalshi** | $44B | ✅ Live | Cross-platform spread detection |
+| **Truth Predict** | TBD | ⏳ | Waiting for TMTG to launch API |
+
+## 🔐 Dual-Platform Intelligence (TS vs X)
+
+| Finding | Data | Implication |
+|---------|------|-------------|
+| China = 100% hidden from X | 203 TS / 0 X | China signals are more authentic |
+| TS publishes 6.2h before X | 38/39 posts matched | 6-hour arbitrage window |
+| X posting day = market up | 63.8% up rate | He posts on X when confident |
+| X day +0.109%, next day -0.087% | 168 X days analyzed | Pump effect, fades next day |
+| X usage declining | 34→1 posts/month | Shifting to TS-only |
 
 ---
 
@@ -469,22 +553,56 @@ print(data['models'])       # Model performance rankings
 print(data['arbitrage'])    # Prediction market arbitrage opportunities
 ```
 
-### Chatbot
+### MCP Server (for Claude Code / Cursor / any MCP client)
+
+Add to `~/.claude/settings.json`:
+```json
+{
+  "mcpServers": {
+    "trump-code": {
+      "command": "python3",
+      "args": ["/path/to/trump-code/mcp_server.py"]
+    }
+  }
+}
+```
+
+Then just ask your AI:
+- *"What are today's Trump Code signals?"*
+- *"Show me the model leaderboard"*
+- *"Any prediction market arbitrage?"*
+- *"Is the system healthy?"*
+
+9 tools available: `signals`, `models`, `predict`, `arbitrage`, `health`, `events`, `dual_platform`, `crowd`, `full_report`
+
+### Chatbot (Gemini Flash, crowd wisdom harvesting)
 
 ```bash
+export GEMINI_KEYS="your-key-1,your-key-2,your-key-3"
 python3 chatbot_server.py
 # Open http://localhost:8888
 ```
 
-Share your trading logic — the best ideas get absorbed into the system! 💡
+- Anonymous, daily quota (500 req/day global, 15/user)
+- Share your trading logic — the best ideas get absorbed into the system! 💡
+- Crowd insights available at `GET /api/insights`
 
-### Prediction Markets Connected
+### Real-Time Monitor
 
-| Platform | Status | What it does |
-|---|---|---|
-| **Polymarket** ($56B volume) | ✅ Live | Real-time prices, signal-based arbitrage |
-| **Kalshi** ($44B volume) | ✅ Live | Cross-platform spread detection |
-| **Truth Predict** | ⏳ Pending | Waiting for API launch |
+```bash
+python3 realtime_loop.py          # Continuous (polls every 5 min)
+python3 realtime_loop.py --once   # Single pass
+```
+
+Detects new posts → classifies signals → snapshots Polymarket + SPY simultaneously → predicts → verifies at 1h/3h/6h → learns
+
+### Circuit Breaker
+
+```bash
+python3 circuit_breaker.py
+```
+
+Checks: Are we better than random? Is performance degrading? Too many consecutive errors? Auto-pauses if the system is broken.
 
 ---
 

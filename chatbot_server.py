@@ -55,11 +55,14 @@ _daily_state = {
 }
 
 # === Gemini Flash 三把 Key 輪用 ===
-GEMINI_KEYS = [
-    "***REDACTED_GEMINI_KEY_1***",   # Key1
-    "***REDACTED_GEMINI_KEY_3***",     # Key2
-    "***REDACTED_GEMINI_KEY_2***",     # Key3
-]
+# 從環境變數讀取，不寫死在代碼裡
+# export GEMINI_KEYS="key1,key2,key3"
+import os as _os
+_keys_str = _os.environ.get('GEMINI_KEYS', '')
+GEMINI_KEYS = [k.strip() for k in _keys_str.split(',') if k.strip()]
+if not GEMINI_KEYS:
+    print("⚠️ 請設定 GEMINI_KEYS 環境變數: export GEMINI_KEYS=\'key1,key2,key3\'")
+    print("   沒有 key 的話聊天功能無法使用")
 _key_index = 0  # 輪用指標
 
 GEMINI_MODEL = "gemini-2.5-flash"
