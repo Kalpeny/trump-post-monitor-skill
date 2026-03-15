@@ -42,6 +42,11 @@ RT_PREDICTIONS_FILE = DATA / "rt_predictions.json"      # 即時預測紀錄
 RT_LEARNING_FILE = DATA / "rt_learning.json"             # 即時學習結果
 POLL_INTERVAL = 300  # 5 分鐘
 
+# === 重大波動門檻 — 小波動是噪音，只學大的 ===
+PM_SIGNIFICANT_MOVE = 0.03    # Polymarket ±3¢ 以上才算「動了」
+SPY_SIGNIFICANT_MOVE = 0.5    # SPY ±0.5% 以上才算「動了」
+# 低於門檻的 = 噪音，不納入學習統計，避免污染模型
+
 
 def log(msg: str) -> None:
     ts = datetime.now(timezone.utc).strftime('%H:%M:%S')
@@ -454,24 +459,41 @@ def verify_predictions() -> dict[str, Any]:
             except Exception:
                 pass
 
+        # 判斷是不是「重大波動」— 小的不學
+        pm_significant = abs(avg_pm_change) >= PM_SIGNIFICANT_MOVE
+        spy_change_val = pred.get('spy_verify_1h') or pred.get('spy_verify_3h') or 0
+        spy_significant = abs(spy_change_val) >= SPY_SIGNIFICANT_MOVE
+        any_significant = pm_significant or spy_significant
+
+        pred['pm_significant'] = pm_significant
+        pred['spy_significant'] = spy_significant
+
         # 6h 後標為 VERIFIED
         if hours_elapsed >= 6:
             pred['pm_verify_6h'] = round(avg_pm_change, 4)
-            pred['status'] = 'VERIFIED'
-            verified_count += 1
-            if pred.get('pm_correct_1h'):
-                correct_1h += 1
-            if pred.get('pm_correct_3h'):
-                correct_3h += 1
+
+            if any_significant:
+                # 重大波動 → 正式驗證，納入學習
+                pred['status'] = 'VERIFIED'
+                verified_count += 1
+                if pred.get('pm_correct_1h'):
+                    correct_1h += 1
+                if pred.get('pm_correct_3h'):
+                    correct_3h += 1
+            else:
+                # 小波動 → 標記但不納入學習
+                pred['status'] = 'NOISE'
 
     # 存檔
     with open(RT_PREDICTIONS_FILE, 'w', encoding='utf-8') as f:
         json.dump(predictions, f, ensure_ascii=False, indent=2)
 
     # 學習：累積統計
-    all_verified = [p for p in predictions if p.get('status') == 'VERIFIED']
+    all_verified = [p for p in predictions if p.get('status') == 'VERIFIED']  # 只有重大波動
+    all_noise = [p for p in predictions if p.get('status') == 'NOISE']
     if all_verified:
         total = len(all_verified)
+        log(f"   📊 重大波動: {total} 筆 | 噪音（忽略）: {len(all_noise)} 筆")
         c1 = sum(1 for p in all_verified if p.get('direction_correct_1h'))
         c3 = sum(1 for p in all_verified if p.get('direction_correct_3h'))
 
@@ -519,21 +541,38 @@ def verify_predictions() -> dict[str, Any]:
 
 
 def _stats_by_signal(verified: list[dict]) -> dict:
-    """按信號類型統計即時預測的命中率。"""
-    stats: dict[str, dict] = defaultdict(lambda: {'total': 0, 'correct_1h': 0, 'correct_3h': 0})
+    """
+    按信號類型統計即時預測的命中率。
+    只統計 VERIFIED（重大波動），不含 NOISE。
+    """
+    stats: dict[str, dict] = defaultdict(lambda: {
+        'total': 0,
+        'pm_correct_1h': 0, 'pm_correct_3h': 0,
+        'spy_correct_1h': 0, 'spy_correct_3h': 0,
+        'divergences': 0,
+    })
     for p in verified:
         for sig_type in p.get('signal_types', []):
             stats[sig_type]['total'] += 1
-            if p.get('direction_correct_1h'):
-                stats[sig_type]['correct_1h'] += 1
-            if p.get('direction_correct_3h'):
-                stats[sig_type]['correct_3h'] += 1
+            if p.get('pm_correct_1h'):
+                stats[sig_type]['pm_correct_1h'] += 1
+            if p.get('pm_correct_3h'):
+                stats[sig_type]['pm_correct_3h'] += 1
+            if p.get('spy_correct_1h'):
+                stats[sig_type]['spy_correct_1h'] += 1
+            if p.get('spy_correct_3h'):
+                stats[sig_type]['spy_correct_3h'] += 1
+            if p.get('pm_vs_stock_divergence'):
+                stats[sig_type]['divergences'] += 1
 
     return {
         sig: {
             'total': s['total'],
-            'hit_1h': round(s['correct_1h'] / s['total'] * 100, 1) if s['total'] > 0 else 0,
-            'hit_3h': round(s['correct_3h'] / s['total'] * 100, 1) if s['total'] > 0 else 0,
+            'pm_hit_1h': round(s['pm_correct_1h'] / s['total'] * 100, 1) if s['total'] > 0 else 0,
+            'pm_hit_3h': round(s['pm_correct_3h'] / s['total'] * 100, 1) if s['total'] > 0 else 0,
+            'spy_hit_1h': round(s['spy_correct_1h'] / s['total'] * 100, 1) if s['total'] > 0 else 0,
+            'spy_hit_3h': round(s['spy_correct_3h'] / s['total'] * 100, 1) if s['total'] > 0 else 0,
+            'divergence_rate': round(s['divergences'] / s['total'] * 100, 1) if s['total'] > 0 else 0,
         }
         for sig, s in sorted(stats.items())
     }
