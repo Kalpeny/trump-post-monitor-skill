@@ -11,7 +11,7 @@
   --gold:#FFD700;--red:#CC0000;--blue:#4488FF;--green:#44CC66;
   --text:#e8e8e8;--dim:#8899aa;--border:#1e2e44;
 }
-body{font-size:28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+body{font-size:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
 a{color:var(--gold);text-decoration:none}
 a:hover{text-decoration:underline}
 
@@ -24,12 +24,12 @@ a:hover{text-decoration:underline}
 .hero .sub{color:var(--dim);font-size:16px;margin-top:4px;letter-spacing:2px}
 .stats{display:flex;justify-content:center;gap:clamp(16px,3vw,40px);margin-top:24px;flex-wrap:wrap}
 .stat{text-align:center}
-.stat .n{font-size:clamp(28px,5vw,36px);font-weight:800;color:var(--gold)}
+.stat .n{font-size:clamp(26px,5vw,38px);font-weight:800;color:var(--gold)}
 .stat .l{font-size:16px;color:var(--dim);line-height:1.3;margin-top:2px}
 
 /* 區塊 */
 .section{margin-top:32px}
-.section h2{font-size:36px;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:16px}
+.section h2{font-size:32px;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:16px}
 
 /* 發現卡片 */
 .discoveries{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
@@ -45,7 +45,7 @@ a:hover{text-decoration:underline}
 /* 狀態格 */
 .status-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:16px}
 .scard{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
-.scard .v{font-size:28px;font-weight:700;color:var(--text);margin:4px 0}
+.scard .v{font-size:20px;font-weight:700;color:var(--text);margin:4px 0}
 .scard .l{font-size:16px;color:var(--dim)}
 
 /* 表格 */
@@ -64,7 +64,7 @@ tr:hover{background:rgba(255,215,0,0.03)}
 .plays{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .play{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
 .play h3{font-size:16px;margin-bottom:10px}
-.play table{font-size:20px}
+.play table{font-size:16px}
 .play th{font-size:16px}
 
 /* 平台對比 */
@@ -77,13 +77,13 @@ tr:hover{background:rgba(255,215,0,0.03)}
 .connect{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .conn{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
 .conn h3{color:var(--gold);font-size:16px;margin-bottom:8px}
-.conn pre{background:var(--bg);padding:14px;border-radius:8px;font-size:16px;overflow-x:auto;color:var(--dim);margin-top:8px;line-height:1.5}
+.conn pre{background:var(--bg);padding:12px;border-radius:8px;font-size:16px;overflow-x:auto;color:var(--dim);margin-top:8px;line-height:1.5}
 
 /* Footer */
 .footer{text-align:center;padding:32px 20px;color:var(--dim);font-size:16px;border-top:1px solid var(--border);margin-top:40px}
 
 /* 聊天按鈕 */
-.fab{position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#CC0000);color:#000;border:none;cursor:pointer;font-size:28px;box-shadow:0 4px 16px rgba(255,215,0,0.3);z-index:1000;transition:transform 0.2s}
+.fab{position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#CC0000);color:#000;border:none;cursor:pointer;font-size:20px;box-shadow:0 4px 16px rgba(255,215,0,0.3);z-index:1000;transition:transform 0.2s}
 .fab:hover{transform:scale(1.1)}
 .chatbox{display:none;position:fixed;bottom:84px;right:20px;width:380px;max-width:90vw;height:500px;max-height:60vh;background:var(--bg);border:1px solid var(--border);border-radius:16px;z-index:1001;flex-direction:column;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.6)}
 .chatbox.open{display:flex}
@@ -115,12 +115,12 @@ tr:hover{background:rgba(255,215,0,0.03)}
   <div style="max-width:900px;margin:28px auto 0;padding:0 20px">
     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center">
       <div style="background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(204,0,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:10px;padding:12px 20px;text-align:center;flex:1;min-width:140px">
-        <div style="color:var(--gold);font-size:36px;font-weight:800" id="funnel-posts">7,400+</div>
+        <div style="color:var(--gold);font-size:32px;font-weight:800" id="funnel-posts">7,400+</div>
         <div style="font-size:16px;color:var(--dim)">📝 Posts 推文</div>
       </div>
       <div style="color:var(--gold);font-size:20px">→</div>
       <div style="background:linear-gradient(135deg,rgba(255,215,0,0.1),rgba(68,136,255,0.08));border:1px solid rgba(255,215,0,0.2);border-radius:10px;padding:12px 20px;text-align:center;flex:1;min-width:140px">
-        <div style="color:var(--gold);font-size:36px;font-weight:800" id="funnel-models">31.5M</div>
+        <div style="color:var(--gold);font-size:32px;font-weight:800" id="funnel-models">31.5M</div>
         <div style="font-size:16px;color:var(--dim)">🔬 Models 模型</div>
       </div>
       <div style="color:var(--red);font-size:20px">→ <span style="font-size:16px">99.84% out</span> →</div>
@@ -154,7 +154,7 @@ tr:hover{background:rgba(255,215,0,0.03)}
 
 <!-- 即時狀態 -->
 <div class="section">
-  <h2>📊 Live Status 即時狀態 ライブ <span class="live-dot"></span><span style="font-size:16px;color:var(--dim);font-weight:400""><span class="refresh-bar"><span class="fill" style="width:100%" data-interval="30"></span></span></span></h2>
+  <h2>📊 Live Status 即時狀態 ライブ <span class="live-dot"></span><span class="refresh-bar"><span class="fill" data-interval="30"></span></span></h2>
   <div class="status-row" id="status-grid">
     <div class="scard"><div class="l">System 系統 システム</div><div class="v" id="s-health">--</div><div class="l" id="s-health2"></div></div>
     <div class="scard"><div class="l">Posts 推文 投稿</div><div class="v" id="s-posts">--</div><div class="l" id="s-posts2"></div></div>
@@ -165,7 +165,7 @@ tr:hover{background:rgba(255,215,0,0.03)}
 
 <!-- 三套劇本 -->
 <div class="section">
-  <h2>🎯 Three Playbooks 三套劇本 3つの戦略<span style="font-size:16px;color:var(--dim);font-weight:400;display:block;margin-top:4px">📅 Research: 2025-01-20 ~ 2026-03-15 · 288 trading days · 564 predictions 研究期間</span></h2>
+  <h2>🎯 Three Playbooks 三套劇本 3つの戦略<div style="font-size:16px;color:var(--dim);font-weight:400;margin-top:4px">📅 2025-01-20 ~ 2026-03-15 · 288 days</div></h2>
   <div class="plays">
     <div class="play">
       <h3>🛡️ Hedge 避險 ヘッジ</h3>
@@ -199,7 +199,7 @@ tr:hover{background:rgba(255,215,0,0.03)}
 
 <!-- 重大發現 -->
 <div class="section">
-  <h2>🔑 Key Discoveries 重大發現 重要な発見<span style="font-size:16px;color:var(--dim);font-weight:400;display:block;margin-top:4px">📅 Research: 2025-01-20 ~ 2026-03-15 · 288 trading days · 564 predictions 研究期間</span></h2>
+  <h2>🔑 Key Discoveries 重大發現 重要な発見<div style="font-size:16px;color:var(--dim);font-weight:400;margin-top:4px">📅 2025-01-20 ~ 2026-03-15 · 288 days</div></h2>
   <div class="discoveries" id="disc-cards">
     <div class="disc red">
       <div class="tag" style="color:#CC0000">🔴 Most Dangerous 最危險</div>
@@ -221,7 +221,7 @@ tr:hover{background:rgba(255,215,0,0.03)}
 
 <!-- 完整 8 個發現 -->
 <div class="section">
-  <h2>📋 All 8 Discoveries 全部發現 全発見<span style="font-size:16px;color:var(--dim);font-weight:400;display:block;margin-top:4px">📅 Research: 2025-01-20 ~ 2026-03-15 · 288 trading days · 564 predictions 研究期間</span></h2>
+  <h2>📋 All 8 Discoveries 全部發現 全発見<div style="font-size:16px;color:var(--dim);font-weight:400;margin-top:4px">📅 2025-01-20 ~ 2026-03-15 · 288 days</div></h2>
   <div style="overflow-x:auto">
   <table>
     <thead><tr><th>#</th><th>Discovery 發現</th><th>Evidence 數據</th><th>Action 行動</th></tr></thead>
@@ -241,12 +241,12 @@ tr:hover{background:rgba(255,215,0,0.03)}
 
 <!-- 雙平台 -->
 <div class="section">
-  <h2>🔐 Dual Platform Truth Social vs X 雙平台密碼<span style="font-size:16px;color:var(--dim);font-weight:400;display:block;margin-top:4px">📅 Research: 168 X posts vs 7,400 Truth Social posts analyzed 研究期間</span></h2>
+  <h2>🔐 Dual Platform Truth Social vs X 雙平台密碼<div style="font-size:16px;color:var(--dim);font-weight:400;margin-top:4px">📅 168 X posts vs 7,400 Truth Social posts</div></h2>
   <div style="overflow-x:auto;margin-bottom:16px">
   <table>
     <thead><tr><th>#</th><th>Code 密碼</th><th>Data 數據</th><th>Meaning 意義</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td style="color:var(--gold)">🇨🇳 China = Hidden 完全隱藏</td><td>TS: 203 篇 / X: 0 篇</td><td>中國信號加權 ×1.5（刻意隱藏=更真實）</td></tr>
+      <tr><td>1</td><td style="color:var(--gold)">🇨🇳 China = Hidden 完全隱藏</td><td>Truth Social: 203 篇 / X: 0 篇</td><td>中國信號加權 ×1.5（刻意隱藏=更真實）</td></tr>
       <tr><td>2</td><td>⏱️ Truth Social → X 延遲 6.2 小時</td><td>38/39 篇 Truth Social 先發</td><td>6 小時操作窗口（63% 偏漲）</td></tr>
       <tr><td>3</td><td>📈 窗口內正報酬 63%</td><td>Truth Social 發文 → X 轉貼之間</td><td>窗口內做多有優勢</td></tr>
       <tr><td>4</td><td style="color:var(--green)">X 推文隔天報酬高 7 倍</td><td>X: +0.252% vs Truth Social only: +0.037%</td><td>X 出現 = 確認信號，報酬更高</td></tr>
@@ -264,20 +264,20 @@ tr:hover{background:rgba(255,215,0,0.03)}
 
 <!-- 最近信號 + 結果 -->
 <div class="section" id="signals">
-  <h2>📡 Signals & Results 信號與結果 <span class="live-dot"></span><span style="font-size:16px;color:var(--dim);font-weight:400""><span class="refresh-bar"><span class="fill" style="width:100%" data-interval="30"></span></span></span></h2>
+  <h2>📡 Signals & Results 信號與結果 シグナルと結果 <span class="live-dot"></span><span class="refresh-bar"><span class="fill" data-interval="30"></span></span></h2>
   <p style="color:var(--dim);font-size:16px;margin-bottom:12px">每個信號偵測後，追蹤預測市場和美股的實際反應 Each signal tracked against PM + S&P 500</p>
   <div id="signal-area" style="min-height:60px"><span style="color:var(--dim)">Loading...</span></div>
 </div>
 
 <!-- 模型排行 -->
 <div class="section" id="rankings">
-  <h2>🏆 Model Rankings 模型排行榜 <span class="live-dot"></span><span style="font-size:16px;color:var(--dim);font-weight:400""><span class="refresh-bar"><span class="fill" style="width:100%" data-interval="60"></span></span></span></h2>
+  <h2>🏆 Model Rankings 模型排行榜 モデルランキング <span class="live-dot"></span><span class="refresh-bar"><span class="fill" data-interval="60"></span></span></h2>
   <div style="overflow-x:auto" id="model-area"><span style="color:var(--dim)">Loading...</span></div>
 </div>
 
 <!-- 架構圖 -->
 <div class="section">
-  <h2>🏗️ Architecture 系統架構 アーキテクチャ<span style="font-size:16px;color:var(--dim);font-weight:400;display:block;margin-top:4px">System design · 40 Python files · 16,903 lines</span></h2>
+  <h2>🏗️ Architecture 系統架構 アーキテクチャ</h2>
   <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;overflow-x:auto;text-align:center">
     <pre style="color:var(--dim);font-size:16px;line-height:1.8;margin:0 auto;display:inline-block;text-align:left">
 Trump 發推文 Truth Social
@@ -323,7 +323,7 @@ Trump 發推文 Truth Social
 
   <!-- 怎麼預測 -->
   <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px">
-    <h3 style="color:var(--gold);font-size:20px;margin-bottom:12px">How It Works 運作方式 <span style="font-size:16px;color:var(--dim);font-weight:400">📅 Research data</span></h3>
+    <h3 style="color:var(--gold);font-size:20px;margin-bottom:12px">How It Works 運作方式</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;font-size:16px">
       <div style="text-align:center;padding:12px">
         <div style="font-size:28px;margin-bottom:6px">📝</div>
@@ -352,24 +352,24 @@ Trump 發推文 Truth Social
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:16px">
     <div style="background:var(--card);border:1px solid var(--gold);border-radius:10px;padding:16px;text-align:center">
       <div style="font-size:16px;color:var(--dim)">Overall Hit Rate 整體命中率</div>
-      <div style="font-size:36px;font-weight:800;color:var(--gold);margin:8px 0">61.3%</div>
+      <div style="font-size:32px;font-weight:800;color:var(--gold);margin:8px 0">61.3%</div>
       <div style="font-size:16px;color:var(--dim)">564 verified / z=5.39</div>
     </div>
     <div style="background:var(--card);border:1px solid var(--green);border-radius:10px;padding:16px;text-align:center">
       <div style="font-size:16px;color:var(--dim)">Best Signal 最強信號</div>
-      <div style="font-size:36px;font-weight:800;color:var(--green);margin:8px 0">+2.79%</div>
+      <div style="font-size:32px;font-weight:800;color:var(--green);margin:8px 0">+2.79%</div>
       <div style="font-size:16px;color:var(--dim)">4 signals combo 四信號齊發</div>
     </div>
     <div style="background:var(--card);border:1px solid var(--red);border-radius:10px;padding:16px;text-align:center">
       <div style="font-size:16px;color:var(--dim)">Worst Signal 最危險</div>
-      <div style="font-size:36px;font-weight:800;color:var(--red);margin:8px 0">-1.06%</div>
+      <div style="font-size:32px;font-weight:800;color:var(--red);margin:8px 0">-1.06%</div>
       <div style="font-size:16px;color:var(--dim)">Pure tariff day 純關稅日</div>
     </div>
   </div>
 
   <!-- 即時市場數據 -->
   <div style="margin-bottom:16px">
-    <h3 style="color:var(--gold);font-size:20px;margin-bottom:12px">📊 Live Markets 即時市場 <span class="live-dot"></span><span style="font-size:16px;color:var(--dim);font-weight:400""><span class="refresh-bar"><span class="fill" style="width:100%" data-interval="60"></span></span></span></h3>
+    <h3 style="color:var(--gold);font-size:20px;margin-bottom:12px">📊 Live Markets 即時市場 ライブ</h3>
     <div style="overflow-x:auto" id="pm-live-area"><span style="color:var(--dim)">Loading markets...</span></div>
   </div>
 
@@ -383,7 +383,7 @@ Trump 發推文 Truth Social
 
 <!-- 正在進行的運算 -->
 <div class="section">
-  <h2>⚙️ Active Computation 正在運算 <span class="live-dot"></span><span style="font-size:16px;color:var(--dim);font-weight:400""><span class="refresh-bar"><span class="fill" style="width:100%" data-interval="60"></span></span></span></h2>
+  <h2>⚙️ Active Computation 正在運算 稼働中</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
     <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
@@ -418,7 +418,7 @@ Trump 發推文 Truth Social
 
 <!-- 群眾洞見 -->
 <div class="section">
-  <h2>💡 Crowd Insights 群眾洞見 <span class="live-dot"></span><span style="font-size:16px;color:var(--dim);font-weight:400""><span class="refresh-bar"><span class="fill" style="width:100%" data-interval="30"></span></span></span></h2>
+  <h2>💡 Crowd Insights 群眾洞見 クラウド・インサイト</h2>
   <div id="crowd-area" style="min-height:40px">
     <div style="color:var(--dim);padding:20px;text-align:center;background:var(--card);border-radius:12px">
       No insights yet / 還沒有群眾洞見 / まだインサイトなし<br>
@@ -613,8 +613,23 @@ async function load(){
 }
 
 // Polymarket 即時數據
-// loadPM removed — merged into loadDashboard
-
+async function loadPM(){
+  try{
+    const d = await(await fetch(B+'/api/polymarket')).json();
+    const markets = (d.markets||[]).filter(m=>m.liquidity>500);
+    if(!markets.length){document.getElementById('pm-live-area').innerHTML='<span style="color:var(--dim)">No active markets / 暫無活躍市場</span>';return}
+    let html='<table><thead><tr><th>Market 市場</th><th>YES</th><th>NO</th><th>Liquidity 流動性</th></tr></thead><tbody>';
+    markets.slice(0,12).forEach(m=>{
+      const yes=m.yes_price||0,no=m.no_price||0,liq=m.liquidity||0;
+      const yesColor=yes>0.7?'var(--green)':yes<0.3?'var(--red)':'var(--gold)';
+      html+=`<tr><td style="max-width:300px">${esc(m.question.substring(0,60))}</td>`;
+      html+=`<td style="color:${yesColor};font-weight:700">${(yes*100).toFixed(1)}%</td>`;
+      html+=`<td style="color:var(--dim)">${(no*100).toFixed(1)}%</td>`;
+      html+=`<td style="color:var(--dim)">$${liq.toLocaleString()}</td></tr>`;
+    });
+    html+='</tbody></table>';
+    document.getElementById('pm-live-area').innerHTML=html;
+  }catch(e){document.getElementById('pm-live-area').innerHTML='<span style="color:var(--dim)">Error loading markets</span>'}
 }
 
 // === 新：從 /api/dashboard 一次拉全部 ===
@@ -709,18 +724,12 @@ async function loadDashboard(){
   }catch(e){console.warn('dashboard load failed:',e)}
 }
 
-
-// 進度條倒數
+// 進度條動畫
 document.querySelectorAll('.refresh-bar .fill').forEach(bar => {
-  const interval = parseInt(bar.dataset.interval) || 30;
-  let remaining = interval;
-  setInterval(() => {
-    remaining--;
-    if (remaining <= 0) remaining = interval;
-    bar.style.width = (remaining / interval * 100) + '%';
-  }, 1000);
+  const sec = parseInt(bar.dataset.interval) || 30;
+  let left = sec;
+  setInterval(() => { left--; if(left<=0) left=sec; bar.style.width=(left/sec*100)+'%'; }, 1000);
 });
-
 load();loadDashboard();
 setInterval(load, 30000);
 setInterval(loadDashboard, 60000);
