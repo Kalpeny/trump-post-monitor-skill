@@ -11,7 +11,7 @@
   --gold:#FFD700;--red:#CC0000;--blue:#4488FF;--green:#44CC66;
   --text:#e8e8e8;--dim:#8899aa;--border:#1e2e44;
 }
-body{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+body{font-size:16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC','Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
 a{color:var(--gold);text-decoration:none}
 a:hover{text-decoration:underline}
 
@@ -25,11 +25,11 @@ a:hover{text-decoration:underline}
 .stats{display:flex;justify-content:center;gap:clamp(16px,3vw,40px);margin-top:24px;flex-wrap:wrap}
 .stat{text-align:center}
 .stat .n{font-size:clamp(22px,4vw,32px);font-weight:800;color:var(--gold)}
-.stat .l{font-size:10px;color:var(--dim);line-height:1.3;margin-top:2px}
+.stat .l{font-size:12px;color:var(--dim);line-height:1.3;margin-top:2px}
 
 /* 區塊 */
 .section{margin-top:32px}
-.section h2{font-size:16px;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:16px}
+.section h2{font-size:20px;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:16px}
 
 /* 發現卡片 */
 .discoveries{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
@@ -39,18 +39,18 @@ a:hover{text-decoration:underline}
 .disc.gold{background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.3)}
 .disc.blue{background:rgba(68,136,255,0.08);border:1px solid rgba(68,136,255,0.3)}
 .disc .tag{font-size:12px;font-weight:700;margin-bottom:8px}
-.disc .val{font-size:17px;font-weight:700;color:var(--text)}
-.disc .desc{font-size:12px;color:var(--dim);margin-top:6px}
+.disc .val{font-size:22px;font-weight:700;color:var(--text)}
+.disc .desc{font-size:13px;color:var(--dim);margin-top:6px}
 
 /* 狀態格 */
 .status-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:16px}
 .scard{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
 .scard .v{font-size:24px;font-weight:700;color:var(--text);margin:4px 0}
-.scard .l{font-size:11px;color:var(--dim)}
+.scard .l{font-size:13px;color:var(--dim)}
 
 /* 表格 */
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;color:var(--dim);font-weight:600;padding:8px 12px;border-bottom:1px solid var(--border);font-size:11px;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;color:var(--dim);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--border);font-size:13px;text-transform:uppercase}
 td{padding:10px 12px;border-bottom:1px solid rgba(30,46,68,0.5)}
 tr:hover{background:rgba(255,215,0,0.03)}
 .bar{height:4px;background:var(--border);border-radius:2px;margin-top:4px;overflow:hidden}
@@ -71,7 +71,7 @@ tr:hover{background:rgba(255,215,0,0.03)}
 .platform{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 .pcard{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px}
 .pcard .name{font-size:14px;font-weight:700;color:var(--gold)}
-.pcard .detail{font-size:12px;color:var(--dim);margin-top:8px;line-height:1.6}
+.pcard .detail{font-size:13px;color:var(--dim);margin-top:8px;line-height:1.6}
 
 /* 連接方式 */
 .connect{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
@@ -117,19 +117,45 @@ tr:hover{background:rgba(255,215,0,0.03)}
     <div class="stat"><div class="n">2</div><div class="l">Markets 市場<br>マーケット</div></div>
   </div>
 
-  <!-- 開場故事 -->
-  <div style="max-width:680px;margin:24px auto 0;padding:0 20px;text-align:left;font-size:13px;color:var(--dim);line-height:1.9">
-    <p>我把他就任以來 <strong style="color:var(--gold)">7,400+</strong> 篇推文全部抓下來，拆成 <strong style="color:var(--gold)">316</strong> 個信號特徵，跑了 <strong style="color:var(--gold)">3,155 萬</strong>組預測模型，只有 <strong style="color:var(--gold)">50,872</strong> 組通過雙段驗證活了下來。</p>
-    <p style="margin-top:12px">目前找到的：</p>
-    <ul style="margin-top:4px;padding-left:20px;list-style:none">
-      <li>→ 他盤前說「暫緩」，當天 S&P 平均漲 <strong style="color:var(--green)">+1.12%</strong></li>
-      <li>→ 關稅→Deal 的轉折間隔，中位數 <strong style="color:var(--gold)">17.4 小時</strong></li>
-      <li>→ 大跌前一天他反而語氣更正面（像在安撫）</li>
-      <li>→ 他 2025-08 偷偷換了簽名格式，我們抓到了</li>
-      <li>→ 中國相關推文 <strong style="color:var(--gold)">100%</strong> 不放 X，203 篇全藏在 Truth Social</li>
-      <li>→ 四信號齊發（關稅+談判+炫耀+寬減）= 平均 <strong style="color:var(--green)">+2.792%</strong></li>
-      <li>→ 他閉嘴的時候市場最好 — <strong style="color:var(--green)">80%</strong> 上漲</li>
-    </ul>
+  <!-- 運算漏斗 -->
+  <div style="max-width:740px;margin:28px auto 0;padding:0 20px">
+    <!-- 漏斗：從 7400 到 550 -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:2px">
+      <div style="width:100%;background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.15);border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;align-items:center">
+        <span style="color:var(--dim);font-size:12px">Raw Posts 原始推文</span>
+        <span style="color:var(--gold);font-size:20px;font-weight:800">7,400+</span>
+      </div>
+      <div style="color:var(--dim);font-size:10px">▼ 拆解成 316 個特徵 ▼</div>
+      <div style="width:85%;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.12);border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;align-items:center">
+        <span style="color:var(--dim);font-size:12px">Models Tested 跑過的模型</span>
+        <span style="color:var(--gold);font-size:20px;font-weight:800">31,554,180</span>
+      </div>
+      <div style="color:var(--dim);font-size:10px">▼ 雙段驗證淘汰 99.84% ▼</div>
+      <div style="width:65%;background:rgba(255,215,0,0.04);border:1px solid rgba(255,215,0,0.1);border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;align-items:center">
+        <span style="color:var(--dim);font-size:12px">Survivors 存活 + 進化</span>
+        <span style="color:var(--gold);font-size:20px;font-weight:800">550</span>
+      </div>
+    </div>
+
+    <!-- 精彩發現（不用清單，用亮點卡片） -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:20px">
+      <div style="background:var(--card);border-radius:8px;padding:14px;text-align:center">
+        <div style="color:var(--green);font-size:22px;font-weight:800">+1.12%</div>
+        <div style="color:var(--dim);font-size:11px;margin-top:4px">盤前說「暫緩」<br>Pre-market RELIEF<br>→ S&P 當天平均漲幅</div>
+      </div>
+      <div style="background:var(--card);border-radius:8px;padding:14px;text-align:center">
+        <div style="color:var(--gold);font-size:22px;font-weight:800">17.4h</div>
+        <div style="color:var(--dim);font-size:11px;margin-top:4px">關稅→Deal 轉折間隔<br>Tariff → Deal median<br>從威脅到讓步的時間</div>
+      </div>
+      <div style="background:var(--card);border-radius:8px;padding:14px;text-align:center">
+        <div style="color:var(--red);font-size:22px;font-weight:800">反直覺</div>
+        <div style="color:var(--dim);font-size:11px;margin-top:4px">大跌前語氣更正面<br>More positive before crash<br>像在安撫市場</div>
+      </div>
+      <div style="background:var(--card);border-radius:8px;padding:14px;text-align:center">
+        <div style="color:var(--gold);font-size:22px;font-weight:800">2025-08</div>
+        <div style="color:var(--dim);font-size:11px;margin-top:4px">偷換簽名格式<br>Signature change detected<br>密碼換碼被我們抓到</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -141,8 +167,8 @@ tr:hover{background:rgba(255,215,0,0.03)}
   <div class="status-row" id="status-grid">
     <div class="scard"><div class="l">System 系統 システム</div><div class="v" id="s-health">--</div><div class="l" id="s-health2"></div></div>
     <div class="scard"><div class="l">Posts 推文 投稿</div><div class="v" id="s-posts">--</div><div class="l" id="s-posts2"></div></div>
-    <div class="scard"><div class="l">Direction 方向 方向</div><div class="v" id="s-dir">--</div><div class="l" id="s-dir2"></div></div>
-    <div class="scard"><div class="l">VIX 恐慌 恐怖指数</div><div class="v" id="s-vix">--</div><div class="l" id="s-vix2"></div></div>
+    <div class="scard"><div class="l">Trend 趨勢 トレンド</div><div class="v" id="s-dir">--</div><div class="l" id="s-dir2"></div></div>
+    <div class="scard"><div class="l">Hit Rate 命中率</div><div class="v" id="s-vix" style="color:var(--gold)">61.3%</div><div class="l" id="s-vix2">z=5.39 統計顯著</div></div>
   </div>
 </div>
 
@@ -250,7 +276,7 @@ Trump 發推文 Truth Social
         <tr><td>Attack 攻擊</td><td style="color:var(--red)">+0.159%</td><td style="color:var(--dim)">vs +0.244%</td></tr>
         <tr><td>Threat 威脅</td><td style="color:var(--red)">+0.125%</td><td style="color:var(--dim)">vs +0.231%</td></tr>
       </table>
-      <div class="desc" style="margin-top:8px;font-size:11px;color:var(--dim)">他罵人=他在焦慮=小心<br>彼が怒る=不安=注意</div>
+      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">他罵人=他在焦慮=小心<br>彼が怒る=不安=注意</div>
     </div>
     <div class="play">
       <h3>📊 Position 佈局 ポジション</h3>
@@ -259,7 +285,7 @@ Trump 發推文 Truth Social
         <tr><td>A+D 先攻再談</td><td style="color:var(--green)">+0.586%</td><td style="color:var(--dim)">65.2% ↑</td></tr>
         <tr><td>A+T 攻擊+關稅</td><td style="color:var(--green)">+0.574%</td><td style="color:var(--dim)">72.7% ↑</td></tr>
       </table>
-      <div class="desc" style="margin-top:8px;font-size:11px;color:var(--dim)">先打再談=典型 Trump 談判術<br>攻撃→交渉=トランプ流</div>
+      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">先打再談=典型 Trump 談判術<br>攻撃→交渉=トランプ流</div>
     </div>
     <div class="play">
       <h3>🚀 Pump 拉盤 ポンプ</h3>
@@ -268,7 +294,7 @@ Trump 發推文 Truth Social
         <tr><td>Brag Only 炫耀</td><td style="color:var(--green)">+0.520%</td><td style="color:var(--dim)">71.4% ↑</td></tr>
         <tr><td>Action 行動</td><td style="color:var(--green)">+0.294%</td><td style="color:var(--dim)">有實際行動</td></tr>
       </table>
-      <div class="desc" style="margin-top:8px;font-size:11px;color:var(--dim)">心情好才用 X=做多<br>機嫌が良い時Xを使う=ロング</div>
+      <div class="desc" style="margin-top:8px;font-size:13px;color:var(--dim)">心情好才用 X=做多<br>機嫌が良い時Xを使う=ロング</div>
     </div>
   </div>
 </div>
@@ -288,7 +314,7 @@ Trump 發推文 Truth Social
     </tbody>
   </table>
   </div>
-  <div style="background:rgba(255,215,0,0.05);border:1px solid rgba(255,215,0,0.2);border-radius:10px;padding:14px;font-size:13px;color:var(--dim)">
+  <div style="background:rgba(255,215,0,0.05);border:1px solid rgba(255,215,0,0.2);border-radius:10px;padding:14px;font-size:14px;color:var(--dim)">
     <strong style="color:var(--gold)">核心結論 Core Insight コア・インサイト：</strong><br>
     Truth Social 是政策信號源（預測用），X 是形象窗口（確認用）。<br>
     TS = policy signal source (prediction), X = image window (confirmation).<br>
@@ -317,10 +343,45 @@ Trump 發推文 Truth Social
   </div>
 </div>
 
+<!-- 正在進行的運算 -->
+<div class="section">
+  <h2>⚙️ Active Computation 正在運算 稼働中</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span class="live-dot"></span>
+        <span style="font-size:15px;font-weight:600">Real-Time Engine 即時引擎</span>
+      </div>
+      <div style="font-size:14px;color:var(--dim)">每 5 分鐘偵測新推文 → 信號分類 → 雙軌追蹤（PM + S&P 500）→ 1h/3h/6h 驗證</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span class="live-dot"></span>
+        <span style="font-size:15px;font-weight:600">Learning 學習引擎</span>
+      </div>
+      <div style="font-size:14px;color:var(--dim)">每天自動升級好模型、降級差模型、淘汰廢物<br>上次：4 升 / 1 降 / 1 淘汰</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span class="live-dot"></span>
+        <span style="font-size:15px;font-weight:600">Evolver 規則進化</span>
+      </div>
+      <div style="font-size:14px;color:var(--dim)">交配好規則＋突變＋精煉明星特徵<br>上次產出 50 條新規則</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span class="live-dot"></span>
+        <span style="font-size:15px;font-weight:600">Breaker 斷路器</span>
+      </div>
+      <div style="font-size:14px;color:var(--dim)">跟隨機比 z=5.39 ✅<br>惡化偵測 50%vs61% 🟡<br>3 個反指標已翻轉</div>
+    </div>
+  </div>
+</div>
+
 <!-- 公開數據 -->
 <div class="section">
   <h2>📦 Open Data 公開數據 オープンデータ</h2>
-  <p style="font-size:13px;color:var(--dim);margin-bottom:12px">All data is public. Clone the repo and explore. 全部數據公開，clone 就能用。全データ公開。</p>
+  <p style="font-size:14px;color:var(--dim);margin-bottom:12px">All data is public. Clone the repo and explore. 全部數據公開，clone 就能用。全データ公開。</p>
   <div style="overflow-x:auto">
   <table>
     <thead><tr><th>File 檔案</th><th>Content 內容</th><th>Updated 更新</th></tr></thead>
@@ -349,7 +410,7 @@ Trump 發推文 Truth Social
   <div class="connect">
     <div class="conn">
       <h3>📡 API</h3>
-      <div style="font-size:12px;color:var(--dim)">REST JSON 任何語言 どの言語でもOK</div>
+      <div style="font-size:13px;color:var(--dim)">REST JSON 任何語言 どの言語でもOK</div>
       <pre>GET /api/signals    信號 シグナル
 GET /api/models     排行 ランキング
 GET /api/playbook   劇本 戦略
@@ -359,7 +420,7 @@ POST /api/chat      聊天 チャット</pre>
     </div>
     <div class="conn">
       <h3>💻 CLI</h3>
-      <div style="font-size:12px;color:var(--dim)">命令列工具 コマンドライン</div>
+      <div style="font-size:13px;color:var(--dim)">命令列工具 コマンドライン</div>
       <pre>git clone github.com/sstklen/trump-code
 cd trump-code
 pip install -r requirements.txt
@@ -370,7 +431,7 @@ python3 trump_code_cli.py json</pre>
     </div>
     <div class="conn">
       <h3>🤖 MCP Server</h3>
-      <div style="font-size:12px;color:var(--dim)">Claude Code / Cursor 直接問 AI</div>
+      <div style="font-size:13px;color:var(--dim)">Claude Code / Cursor 直接問 AI</div>
       <pre>// ~/.claude/settings.json
 {
   "mcpServers": {
@@ -416,10 +477,10 @@ async function load(){
     document.getElementById('s-posts').textContent = d.posts_today||0;
     document.getElementById('s-posts2').textContent = (d.signals||[]).join(' ');
     const c = d.consensus||'NEUTRAL';
-    document.getElementById('s-dir').textContent = c==='BULLISH'?'📈':c==='BEARISH'?'📉':'➡️';
-    document.getElementById('s-dir2').textContent = c + ' ' + (d.date||'');
-    document.getElementById('s-vix').textContent = '--';
-    document.getElementById('s-vix2').textContent = 'loading...';
+    document.getElementById('s-dir').textContent = c==='BULLISH'?'📈 UP':'📉 DOWN'; document.getElementById('s-dir').style.color = c==='BULLISH'?'var(--green)':'var(--red)';
+    document.getElementById('s-dir2').textContent = (c==='BULLISH'?'看多 強気':c==='BEARISH'?'看空 弱気':'觀望 様子見') + ' ' + (d.date||'');
+    // VIX 已改為靜態 hit rate
+    
   }catch(e){}
 
   // 信號
@@ -435,7 +496,7 @@ async function load(){
     let html = '';
     const sorted = Object.entries(days).sort((a,b)=>b[0].localeCompare(a[0]));
     sorted.forEach(([date,sigs])=>{
-      html += '<div style="margin-bottom:12px"><div style="font-size:12px;color:var(--dim);margin-bottom:6px">'+esc(date)+'</div><div style="display:flex;flex-wrap:wrap;gap:4px">';
+      html += '<div style="margin-bottom:12px"><div style="font-size:13px;color:var(--dim);margin-bottom:6px">'+esc(date)+'</div><div style="display:flex;flex-wrap:wrap;gap:4px">';
       sigs.forEach(s=>{
         html += '<span class="sig active">'+(labels[s.type]||s.type)+' ×'+s.count+'</span>';
       });
