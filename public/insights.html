@@ -521,33 +521,75 @@
     </div>
   </nav>
 
-  <!-- 三語標題 -->
+  <!-- 標題 + 統計數字在最上面 -->
   <div class="hero">
-    <h1>TRUMP CODE<br><small style="font-size:16px;opacity:0.8;letter-spacing:2px">川普密碼 ・ トランプ・コード</small></h1>
+    <h1 style="font-size:36px;letter-spacing:4px">TRUMP CODE</h1>
     <div class="subtitle-row">
-      <span class="subtitle">AI Signal Intelligence</span>
+      <span class="subtitle" style="font-size:15px">川普密碼</span>
       <span class="subtitle" style="color: var(--border);">|</span>
-      <span class="subtitle">AI 信號情報平台</span>
-      <span class="subtitle" style="color: var(--border);">|</span>
-      <span class="subtitle">AI シグナル・インテリジェンス</span>
+      <span class="subtitle" style="font-size:15px">トランプ・コード</span>
     </div>
-    <p style="margin-top: 12px; font-size: 13px; color: var(--text-muted);">
+
+    <!-- 統計數字（最上面！） -->
+    <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px;padding:16px 0;">
+      <div style="text-align:center;min-width:80px">
+        <div style="color:#FFD700;font-size:28px;font-weight:bold">564</div>
+        <div style="color:var(--text-muted);font-size:11px;line-height:1.3">Verified<br>已驗證預測<br>検証済み</div>
+      </div>
+      <div style="text-align:center;min-width:80px">
+        <div style="color:#FFD700;font-size:28px;font-weight:bold">61.3%</div>
+        <div style="color:var(--text-muted);font-size:11px;line-height:1.3">Hit Rate<br>命中率<br>的中率</div>
+      </div>
+      <div style="text-align:center;min-width:80px">
+        <div style="color:#FFD700;font-size:28px;font-weight:bold">550</div>
+        <div style="color:var(--text-muted);font-size:11px;line-height:1.3">Rules<br>存活規則<br>ルール</div>
+      </div>
+      <div style="text-align:center;min-width:80px">
+        <div style="color:#FFD700;font-size:28px;font-weight:bold">11</div>
+        <div style="color:var(--text-muted);font-size:11px;line-height:1.3">Models<br>模型<br>モデル</div>
+      </div>
+      <div style="text-align:center;min-width:80px">
+        <div style="color:#FFD700;font-size:28px;font-weight:bold">2</div>
+        <div style="color:var(--text-muted);font-size:11px;line-height:1.3">Markets<br>預測市場<br>市場</div>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:var(--text-muted)">
       <span class="live-dot"></span>
-      <span id="refresh-text">Auto-refresh every 30s</span>
+      <span id="refresh-text">Auto-refresh 30s</span>
     </p>
   </div>
 
   <div class="container">
 
-    <!-- 系統狀態面板 -->
+    <!-- 重大發現（最吸引眼球的數據） -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px;" id="discovery-cards">
+      <div style="background:rgba(204,0,0,0.15);border:1px solid #CC0000;border-radius:12px;padding:16px;">
+        <div style="font-size:13px;color:#CC0000;font-weight:bold;margin-bottom:6px">🔴 Most Dangerous 最危險 最も危険</div>
+        <div style="font-size:14px;color:var(--text-primary)">純關稅日 = -1.057%<br>Pure Tariff day = biggest drop</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:4px">只喊關稅不談判 → 平均跌 1%</div>
+      </div>
+      <div style="background:rgba(255,215,0,0.1);border:1px solid #FFD700;border-radius:12px;padding:16px;">
+        <div style="font-size:13px;color:#FFD700;font-weight:bold;margin-bottom:6px">💰 Most Profitable 最賺錢 最も収益</div>
+        <div style="font-size:14px;color:var(--text-primary)">四信號齊發 = +2.792%<br>4 signals together = biggest gain</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:4px">關稅+談判+炫耀+寬減 → 大 Deal 在即</div>
+      </div>
+      <div style="background:rgba(100,180,255,0.1);border:1px solid #64B4FF;border-radius:12px;padding:16px;">
+        <div style="font-size:13px;color:#64B4FF;font-weight:bold;margin-bottom:6px">🤯 Biggest Surprise 最意外 最も意外</div>
+        <div style="font-size:14px;color:var(--text-primary)">他閉嘴 = 80% 上漲<br>He shuts up = 80% market goes UP</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:4px">沒推文的日子市場最好！沈黙は金</div>
+      </div>
+    </div>
+
+    <!-- 系統狀態（4 卡片） -->
     <div class="status-grid" id="status-grid">
       <div class="status-card">
-        <div class="label">System 系統狀態 システム</div>
+        <div class="label">System 系統 システム</div>
         <div class="value" id="sys-status">--</div>
         <div class="sub" id="sys-uptime"></div>
       </div>
       <div class="status-card">
-        <div class="label">Latest Posts 最新推文 最新投稿</div>
+        <div class="label">Posts 推文 投稿</div>
         <div class="value" id="sys-signals">--</div>
         <div class="sub" id="sys-signals-sub"></div>
       </div>
@@ -557,7 +599,7 @@
         <div class="sub" id="sys-models-sub"></div>
       </div>
       <div class="status-card">
-        <div class="label">Direction 方向 コンセンサス</div>
+        <div class="label">Direction 方向 方向</div>
         <div class="value" id="sys-updated">--</div>
         <div class="sub" id="sys-updated-sub"></div>
       </div>
@@ -1004,17 +1046,6 @@ python3 trump_code_cli.py json</pre>
   }
 }
 // 然後直接問：「川普密碼今天信號？」</pre>
-        </div>
-      </div>
-
-      <!-- 統計數字 -->
-      <div style="margin-top: 24px; padding: 16px; background: rgba(255,215,0,0.05); border: 1px solid rgba(255,215,0,0.2); border-radius: 8px; text-align: center;">
-        <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; font-size: 13px; color: var(--text-secondary);">
-          <span><strong style="color:#FFD700;font-size:18px">564</strong><br>verified predictions<br>已驗證預測</span>
-          <span><strong style="color:#FFD700;font-size:18px">61.3%</strong><br>hit rate (z=5.39)<br>命中率</span>
-          <span><strong style="color:#FFD700;font-size:18px">550</strong><br>active rules<br>存活規則</span>
-          <span><strong style="color:#FFD700;font-size:18px">11</strong><br>named models<br>命名模型</span>
-          <span><strong style="color:#FFD700;font-size:18px">2</strong><br>prediction markets<br>預測市場</span>
         </div>
       </div>
 
