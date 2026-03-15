@@ -5,8 +5,9 @@
 **AI-powered cryptanalysis of presidential communications × stock market impact.**
 
 [![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-trumpcode.washinmura.jp-FFD700?style=for-the-badge&logo=vercel&logoColor=white)](https://trumpcode.washinmura.jp)
-[![Buy Me a Claude Max](https://img.shields.io/badge/Buy_Me_a_Claude_Max-☕_Support-FF6F00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buy.stripe.com/5kQ6oI8Wk2Ui6Q3aww4c80r)
 [![GitHub Stars](https://img.shields.io/github/stars/sstklen/trump-code?style=for-the-badge&logo=github&color=FFD700)](https://github.com/sstklen/trump-code)
+
+[![Buy Me a Claude Max](https://img.shields.io/badge/☕_Buy_Me_a_Claude_Max-Support_This_Project-FF6F00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buy.stripe.com/5kQ6oI8Wk2Ui6Q3aww4c80r)
 
 [![Models Tested](https://img.shields.io/badge/Models_Tested-31.5M-FF0000?style=flat-square)](data/surviving_rules.json)
 [![Survivors](https://img.shields.io/badge/Survivors-551-00C853?style=flat-square)](data/surviving_rules.json)
