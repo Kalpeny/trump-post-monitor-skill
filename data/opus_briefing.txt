@@ -1,30 +1,24 @@
-# 川普密碼 Opus 簡報 — 2026-03-15
-準備時間: 2026-03-15T14:28:44Z
+# 川普密碼 Opus 簡報 — 2026-03-16
+準備時間: 2026-03-16T14:59:24Z
 
-## 今日推文: 11 篇
-時間: 2026-03-14T00:11:20.531Z ~ 2026-03-14T19:25:39.030Z
+## 今日推文: 7 篇
+時間: 2026-03-16T02:30:04.645Z ~ 2026-03-16T13:19:11.296Z
 
-[00:11] Trump honors Virginia mom, farmer at White House Women's History Month event: https://wjla.com/news/local/president-donald-trump-honors-virginia-mom-farmer-white-house-womens-history-month-event-first-agriculture-working-mothers-contributions-lady-melania-trump-brooke-farms-llc-mult-generational-far
+[02:30] Mark Levin, a truly Great American Patriot, is somewhat under siege by other people with far less Intellect, Capability, and Love for our Country. Mark is Tough, Strong, and Brilliant, hence the nickname, "THE GREAT ONE," conceived by our MAGA friend, the wonderful Sean Hannity, after years of deali
 
-[00:12] US Olympic bobsledder surprises Trump, awards him prestigious Order of Ikkos medal: https://nypost.com/2026/03/12/us-news/trump-awarded-prestigious-order-of-ikkos-medal-by-us-olympian-bobsledder/
+[02:45] The decision that mattered most to me was TARIFFS! The Court knew where I stood, how badly I wanted this Victory for our Country, and instead decided to, potentially, give away Trillions of Dollars to Countries and Companies who have been taking advantage of the United States for decades. Our Suprem
 
-[00:12] Trump Investment Surge: Trillions Pour Into America As Economic Revival Accelerates: https://thenevadaglobe.com/articles/trump-investment-surge-trillions-pour-into-america-as-economic-revival-accelerates/
+[02:46] RT: https://truthsocial.com/users/realDonaldTrump/statuses/116236559151421767The Courts treat Republicans, and me, so unfairly, always seeming to protect those who should not be protected. They are highly politicized. Cases don't matter, the Judge does! As an example, how is this absolutely terrible
 
-[00:12] Kevin Hern, from the Wonderful State of Oklahoma (where I won all 77 out of 77 Counties, in 2016, 2020, and 2024!), is a Great Patriot, and FANTASTIC Congressman! A true friend of MAGA, Kevin is now running for the United States Senate, where I know he will continue to do an incredible job. Kevin is
+[08:13] The Courts treat Republicans, and me, so unfairly, always seeming to protect those who should not be protected. They are highly politicized. Cases don’t matter, the Judge does! As an example, how is this absolutely terrible Federal Reserve Chairman, Jerome “Too Late” Powell, not even allowed to be i
 
-[03:53] The Fake News Media hates to report how well the United States Military has done against Iran, which is totally defeated and wants a deal - But not a deal that I would accept! Thank you for your attention to this matter. President DJT
+[11:50] Michael Whatley is so Great! Running against a really bad former Governor who set murderers free to kill again, and was grossly incompetent on the big hurricane cleanup. I had to get it done when I took office on January 20th, and I did! I hope the Great people of North Carolina remember how BAD Roy
 
-[12:08] Thank you to Johnny Jones and all of our GREAT TSA Agents who are going to work but not being paid because the Radical Left Democrats refuse to honor the deal that was approved and voted on in Congress. They want your money to go to "Border Criminals, Murderers, foreign Drug Dealers, and some of the
+[13:16] The crazed Democrats are not allowing TSA Agents to get paid. The deal was made a long time ago. They broke it in order to get money for Sanctuary Cities and illegal aliens, many of them hardened criminals. The Radical  Left Democrats are hopeless!!! President DJT
 
-[13:35] Yet again, an intentionally misleading headline by the Fake News Media about the five tanker planes that were supposedly struck down at an Airport in Saudi Arabia, and of no further use. In actuality, the Base was hit a few days ago, but the planes were not "struck" or "destroyed." Four of the five 
+[13:19] News Conference today, prior to Trump Kennedy Center Board Meeting. Thank you!
 
-[14:04] Many Countries, especially those who are affected by Iran's attempted closure of the Hormuz Strait, will be sending War Ships, in conjunction with the United States of America, to keep the Strait open and safe. We have already destroyed 100% of Iran's Military capability, but it's easy for them to s
-
-[18:58] The United States of America has beaten and completely decimated Iran, both Militarily, Economically, and in every other way, but the Countries of the World that receive Oil through the Hormuz Strait must take care of that passage, and we will help — A LOT! The U.S. will also coordinate with those C
-
-[19:25] McLaughlin: Strong Majority Backs Trump in Stopping Iran's Nuclear Ambitions: https://www.newsmax.com/mclaughlin/cable-nuclear-weapons/2026/03/12/id/1249304/
-
-## 關鍵字偵測到的信號: DEAL, CHINA, IRAN, DEAL_ONLY
+## 關鍵字偵測到的信號: TARIFF, DEAL, IRAN
 
 ## 模型績效排行
   A3_relief_rocket (盤前 RELIEF→當天飆): 72.7% | 報酬 +1.206% | 11 筆
@@ -48,15 +42,15 @@
 
 ## 學習引擎上次動作: 4 升級 / 1 降級 / 1 淘汰
 
-## 規則進化: 新增 49 條規則
+## 規則進化: 新增 46 條規則
 
 ## 信號信心度
-  ACTION: 0.802
+  ACTION: 0.815
   CHINA: 0.6
   DEAL: 0.55
   DEAL_ONLY: 0.65
   IRAN: 0.55
-  RELIEF: 0.9
+  RELIEF: 0.95
   TARIFF: 0.7
   TARIFF_ONLY: 0.7
   THREAT: 0.6

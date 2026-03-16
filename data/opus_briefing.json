@@ -1,118 +1,108 @@
 {
-  "date": "2026-03-15",
-  "prepared_at": "2026-03-15T14:28:44Z",
+  "date": "2026-03-16",
+  "prepared_at": "2026-03-16T14:59:24Z",
   "status": "PENDING",
   "today_posts": {
-    "count": 11,
-    "latest": "McLaughlin: Strong Majority Backs Trump in Stopping Iran's Nuclear Ambitions: https://www.newsmax.com/mclaughlin/cable-nuclear-weapons/2026/03/12/id/1249304/",
-    "earliest_time": "2026-03-14T00:11:20.531Z",
-    "latest_time": "2026-03-14T19:25:39.030Z",
+    "count": 7,
+    "latest": "News Conference today, prior to Trump Kennedy Center Board Meeting. Thank you!",
+    "earliest_time": "2026-03-16T02:30:04.645Z",
+    "latest_time": "2026-03-16T13:19:11.296Z",
     "sample": [
       {
-        "time": "00:11",
-        "text": "Trump honors Virginia mom, farmer at White House Women's History Month event: https://wjla.com/news/local/president-donald-trump-honors-virginia-mom-farmer-white-house-womens-history-month-event-first-agriculture-working-mothers-contributions-lady-melania-trump-brooke-farms-llc-mult-generational-far"
+        "time": "02:30",
+        "text": "Mark Levin, a truly Great American Patriot, is somewhat under siege by other people with far less Intellect, Capability, and Love for our Country. Mark is Tough, Strong, and Brilliant, hence the nickname, \"THE GREAT ONE,\" conceived by our MAGA friend, the wonderful Sean Hannity, after years of deali"
       },
       {
-        "time": "00:12",
-        "text": "US Olympic bobsledder surprises Trump, awards him prestigious Order of Ikkos medal: https://nypost.com/2026/03/12/us-news/trump-awarded-prestigious-order-of-ikkos-medal-by-us-olympian-bobsledder/"
+        "time": "02:45",
+        "text": "The decision that mattered most to me was TARIFFS! The Court knew where I stood, how badly I wanted this Victory for our Country, and instead decided to, potentially, give away Trillions of Dollars to Countries and Companies who have been taking advantage of the United States for decades. Our Suprem"
       },
       {
-        "time": "00:12",
-        "text": "Trump Investment Surge: Trillions Pour Into America As Economic Revival Accelerates: https://thenevadaglobe.com/articles/trump-investment-surge-trillions-pour-into-america-as-economic-revival-accelerates/"
+        "time": "02:46",
+        "text": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116236559151421767The Courts treat Republicans, and me, so unfairly, always seeming to protect those who should not be protected. They are highly politicized. Cases don't matter, the Judge does! As an example, how is this absolutely terrible"
       },
       {
-        "time": "00:12",
-        "text": "Kevin Hern, from the Wonderful State of Oklahoma (where I won all 77 out of 77 Counties, in 2016, 2020, and 2024!), is a Great Patriot, and FANTASTIC Congressman! A true friend of MAGA, Kevin is now running for the United States Senate, where I know he will continue to do an incredible job. Kevin is"
+        "time": "08:13",
+        "text": "The Courts treat Republicans, and me, so unfairly, always seeming to protect those who should not be protected. They are highly politicized. Cases don’t matter, the Judge does! As an example, how is this absolutely terrible Federal Reserve Chairman, Jerome “Too Late” Powell, not even allowed to be i"
       },
       {
-        "time": "03:53",
-        "text": "The Fake News Media hates to report how well the United States Military has done against Iran, which is totally defeated and wants a deal - But not a deal that I would accept! Thank you for your attention to this matter. President DJT"
+        "time": "11:50",
+        "text": "Michael Whatley is so Great! Running against a really bad former Governor who set murderers free to kill again, and was grossly incompetent on the big hurricane cleanup. I had to get it done when I took office on January 20th, and I did! I hope the Great people of North Carolina remember how BAD Roy"
       },
       {
-        "time": "12:08",
-        "text": "Thank you to Johnny Jones and all of our GREAT TSA Agents who are going to work but not being paid because the Radical Left Democrats refuse to honor the deal that was approved and voted on in Congress. They want your money to go to \"Border Criminals, Murderers, foreign Drug Dealers, and some of the"
+        "time": "13:16",
+        "text": "The crazed Democrats are not allowing TSA Agents to get paid. The deal was made a long time ago. They broke it in order to get money for Sanctuary Cities and illegal aliens, many of them hardened criminals. The Radical  Left Democrats are hopeless!!! President DJT"
       },
       {
-        "time": "13:35",
-        "text": "Yet again, an intentionally misleading headline by the Fake News Media about the five tanker planes that were supposedly struck down at an Airport in Saudi Arabia, and of no further use. In actuality, the Base was hit a few days ago, but the planes were not \"struck\" or \"destroyed.\" Four of the five "
-      },
-      {
-        "time": "14:04",
-        "text": "Many Countries, especially those who are affected by Iran's attempted closure of the Hormuz Strait, will be sending War Ships, in conjunction with the United States of America, to keep the Strait open and safe. We have already destroyed 100% of Iran's Military capability, but it's easy for them to s"
-      },
-      {
-        "time": "18:58",
-        "text": "The United States of America has beaten and completely decimated Iran, both Militarily, Economically, and in every other way, but the Countries of the World that receive Oil through the Hormuz Strait must take care of that passage, and we will help — A LOT! The U.S. will also coordinate with those C"
-      },
-      {
-        "time": "19:25",
-        "text": "McLaughlin: Strong Majority Backs Trump in Stopping Iran's Nuclear Ambitions: https://www.newsmax.com/mclaughlin/cable-nuclear-weapons/2026/03/12/id/1249304/"
+        "time": "13:19",
+        "text": "News Conference today, prior to Trump Kennedy Center Board Meeting. Thank you!"
       }
     ]
   },
   "keyword_signals": [
+    "TARIFF",
     "DEAL",
-    "CHINA",
-    "IRAN",
-    "DEAL_ONLY"
+    "IRAN"
   ],
   "today_features": {
-    "posts_11_20": true,
-    "avg_len_long": true,
-    "caps_low": true,
-    "excl_normal": true,
-    "questions_no": true,
+    "posts_6_10": true,
+    "avg_len_very_long": true,
+    "caps_medium": true,
+    "excl_extreme": true,
+    "questions_yes": true,
+    "mostly_premarket": true,
     "has_night": true,
     "heavy_night": true,
+    "kw_tariff": true,
+    "kw_tariff_2plus": true,
+    "pre_tariff": true,
+    "kw_tariffs": true,
     "kw_deal": true,
     "kw_deal_2plus": true,
     "pre_deal": true,
-    "kw_china": true,
-    "open_china": true,
-    "kw_japan": true,
-    "open_japan": true,
     "kw_iran": true,
-    "kw_iran_2plus": true,
-    "open_iran": true,
-    "kw_korea": true,
-    "open_korea": true,
-    "kw_saudi": true,
-    "open_saudi": true,
     "kw_dow": true,
     "kw_dow_2plus": true,
-    "open_dow": true,
-    "kw_economy": true,
-    "kw_oil": true,
-    "open_oil": true,
-    "kw_energy": true,
+    "pre_dow": true,
+    "kw_billion": true,
+    "kw_billion_2plus": true,
+    "pre_billion": true,
     "kw_trillion": true,
     "kw_great": true,
     "kw_great_2plus": true,
     "pre_great": true,
-    "open_great": true,
-    "kw_tremendous": true,
-    "kw_incredible": true,
-    "kw_amazing": true,
     "kw_fantastic": true,
+    "pre_fantastic": true,
     "kw_wonderful": true,
-    "kw_fake": true,
-    "kw_fake_2plus": true,
-    "open_fake": true,
+    "kw_wonderful_2plus": true,
+    "kw_corrupt": true,
+    "kw_corrupt_2plus": true,
+    "pre_corrupt": true,
     "kw_terrible": true,
-    "open_terrible": true,
-    "kw_worst": true,
-    "pre_worst": true,
+    "kw_terrible_2plus": true,
+    "pre_terrible": true,
+    "kw_horrible": true,
+    "kw_horrible_2plus": true,
+    "pre_horrible": true,
+    "kw_disaster": true,
+    "kw_disaster_2plus": true,
+    "pre_disaster": true,
+    "kw_disgrace": true,
+    "kw_disgrace_2plus": true,
+    "pre_disgrace": true,
+    "kw_incompetent": true,
+    "kw_incompetent_2plus": true,
+    "pre_incompetent": true,
+    "kw_biden": true,
     "kw_maga": true,
-    "kw_america_first": true,
     "kw_president_djt": true,
     "kw_president_djt_2plus": true,
     "pre_president_djt": true,
+    "kw_president_of_the_united_states": true,
     "kw_thank_you_for_your_attention": true,
-    "kw_never_let_you_down": true,
-    "kw_complete_and_total": true,
-    "is_weekend": true,
-    "deal_without_tariff": true,
-    "deal_no_tariff": true
+    "kw_thank_you_for_your_attention_2plus": true,
+    "is_monday": true,
+    "volume_falling_3d": true,
+    "both_tariff_and_deal": true
   },
   "model_performance": {
     "A1_tariff_bearish": {
@@ -221,17 +211,18 @@
     "signal_adjusted": 2
   },
   "evolution_latest": {
-    "date": "2026-03-15",
+    "date": "2026-03-16",
     "crossover": 16,
-    "mutation": 16,
+    "mutation": 13,
     "distill": 17,
-    "total_new": 49,
+    "total_new": 46,
     "total_rules_after": 600,
     "top_3": [
       {
         "features": [
           "kw_energy",
-          "kw_interest_rate"
+          "kw_interest_rate",
+          "open_dow"
         ],
         "direction": "LONG",
         "hold": 3,
@@ -240,31 +231,31 @@
       },
       {
         "features": [
-          "kw_interest_rate",
-          "kw_energy"
+          "kw_europe",
+          "kw_thank_you_for_your_attention"
         ],
         "direction": "LONG",
         "hold": 3,
-        "score": 100.0,
-        "origin": "distilled"
+        "score": 92.3,
+        "origin": "crossover"
       },
       {
         "features": [
-          "is_friday",
-          "kw_tariffs_2plus"
+          "open_president_of_the_united_states",
+          "kw_inflation"
         ],
         "direction": "LONG",
         "hold": 3,
-        "score": 93.8,
-        "origin": "distilled"
+        "score": 90.0,
+        "origin": "crossover"
       }
     ]
   },
   "signal_confidence": {
     "TARIFF": 0.7,
     "DEAL": 0.55,
-    "RELIEF": 0.9,
-    "ACTION": 0.802,
+    "RELIEF": 0.95,
+    "ACTION": 0.815,
     "THREAT": 0.6,
     "CHINA": 0.6,
     "IRAN": 0.55,
@@ -272,12 +263,11 @@
     "DEAL_ONLY": 0.65
   },
   "prediction_market": {
-    "date": "2026-03-15",
+    "date": "2026-03-16",
     "signals": [
+      "TARIFF",
       "DEAL",
-      "CHINA",
-      "IRAN",
-      "DEAL_ONLY"
+      "IRAN"
     ],
     "opportunities": [],
     "total_scanned": 0
