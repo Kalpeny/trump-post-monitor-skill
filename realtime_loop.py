@@ -495,6 +495,41 @@ def snapshot_sp500() -> dict[str, Any]:
         return {'error': str(e), 'timestamp': now_str()}
 
 
+def snapshot_trump_coin() -> dict[str, Any]:
+    """
+    即時抓 $TRUMP 幣（Official Trump）的價格。
+    CoinGecko Free API，不需 API key。
+    """
+    try:
+        url = (
+            'https://api.coingecko.com/api/v3/simple/price'
+            '?ids=official-trump'
+            '&vs_currencies=usd'
+            '&include_24hr_change=true'
+            '&include_market_cap=true'
+        )
+        req = urllib.request.Request(url, headers={
+            'User-Agent': 'TrumpCode-RT/1.0',
+        })
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.load(resp)
+
+        coin = data.get('official-trump', {})
+        price = coin.get('usd')
+        if price is None:
+            return {'error': 'no price data', 'timestamp': now_str()}
+
+        return {
+            'price': round(float(price), 4),
+            'change_24h': round(float(coin.get('usd_24h_change', 0)), 2),
+            'market_cap': round(float(coin.get('usd_market_cap', 0)), 0),
+            'timestamp': now_str(),
+        }
+    except Exception as e:
+        log(f"   ⚠️ $TRUMP 幣價快照失敗: {e}")
+        return {'error': str(e), 'timestamp': now_str()}
+
+
 def snapshot_pm_prices() -> dict[str, Any]:
     """
     即時抓 Polymarket 的 Trump 相關市場價格。
@@ -576,6 +611,7 @@ def make_prediction(
     signals: list[dict],
     pm_snapshot: dict,
     stock_snapshot: dict | None = None,
+    coin_snapshot: dict[str, Any] | None = None,
 ) -> dict[str, Any] | None:
     """
     根據推文信號 + PM 價格 + 美股價格，做出即時雙軌預測。
@@ -664,6 +700,13 @@ def make_prediction(
         'pm_vs_stock_divergence': None,  # PM 和美股反應是否不同
         'divergence_detail': None,       # 具體差異
 
+        # $TRUMP 幣軌
+        'trump_coin_at_signal': coin_snapshot.get('price') if coin_snapshot and 'price' in coin_snapshot else None,
+        'trump_coin_24h_change': coin_snapshot.get('change_24h') if coin_snapshot and 'change_24h' in coin_snapshot else None,
+        'trump_coin_verify_1h': None,
+        'trump_coin_verify_3h': None,
+        'trump_coin_verify_6h': None,
+
         'status': 'LIVE',
     }
 
@@ -695,6 +738,10 @@ def verify_predictions() -> dict[str, Any]:
         api_ok = True
     except ImportError:
         api_ok = False
+
+    # 抓一次 $TRUMP 幣價，所有預測共用（避免 rate limit）
+    coin_now = snapshot_trump_coin()
+    coin_price_now = coin_now.get('price')
 
     verified_count = 0
     correct_1h = 0
@@ -749,6 +796,8 @@ def verify_predictions() -> dict[str, Any]:
                 pred['pm_correct_1h'] = avg_pm_change > 0
             elif direction == 'DOWN':
                 pred['pm_correct_1h'] = avg_pm_change < 0
+            if coin_price_now and pred.get('trump_coin_verify_1h') is None:
+                pred['trump_coin_verify_1h'] = coin_price_now
 
         if hours_elapsed >= 3 and pred.get('pm_verify_3h') is None:
             pred['pm_verify_3h'] = round(avg_pm_change, 4)
@@ -756,6 +805,8 @@ def verify_predictions() -> dict[str, Any]:
                 pred['pm_correct_3h'] = avg_pm_change > 0
             elif direction == 'DOWN':
                 pred['pm_correct_3h'] = avg_pm_change < 0
+            if hours_elapsed >= 3 and coin_price_now and pred.get('trump_coin_verify_3h') is None:
+                pred['trump_coin_verify_3h'] = coin_price_now
 
         # --- 美股軌驗證 ---
         spy_at = pred.get('spy_at_signal')
@@ -817,6 +868,8 @@ def verify_predictions() -> dict[str, Any]:
         # 持續追蹤：6h / 12h / 24h / 48h（川普效應最長好幾天）
         if hours_elapsed >= 6 and pred.get('pm_verify_6h') is None:
             pred['pm_verify_6h'] = round(avg_pm_change, 4)
+            if hours_elapsed >= 6 and coin_price_now and pred.get('trump_coin_verify_6h') is None:
+                pred['trump_coin_verify_6h'] = coin_price_now
 
         if hours_elapsed >= 12 and pred.get('pm_verify_12h') is None:
             pred['pm_verify_12h'] = round(avg_pm_change, 4)
@@ -995,6 +1048,9 @@ def run_once() -> dict[str, Any]:
         # 2. 同時快照 PM 價格 + 美股
         pm_snapshot = snapshot_pm_prices()
         stock_snapshot = snapshot_sp500()
+        coin_snapshot = snapshot_trump_coin()
+        if coin_snapshot.get('price'):
+            log(f"   🪙 $TRUMP: ${coin_snapshot['price']:.2f} ({coin_snapshot.get('change_24h', 0):+.1f}%)")
         if stock_snapshot.get('spy_price'):
             log(f"   📈 SPY: ${stock_snapshot['spy_price']} ({stock_snapshot.get('spy_change_pct', 0):+.2f}%)"
                 f" | ES: ${stock_snapshot.get('es_futures', '?')}"
@@ -1014,7 +1070,7 @@ def run_once() -> dict[str, Any]:
                 sig_str = ', '.join(f"{s['type']}({s['confidence']:.0%})" for s in signals)
                 log(f"      信號: {sig_str}")
 
-                pred = make_prediction(post, signals, pm_snapshot, stock_snapshot)
+                pred = make_prediction(post, signals, pm_snapshot, stock_snapshot, coin_snapshot)
                 if pred:
                     predictions.append(pred)
                     result['predictions_made'] += 1
