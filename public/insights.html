@@ -1216,7 +1216,7 @@ python3 trump_code_cli.py json</pre>
 </footer>
 
 <!-- 遊戲浮動鈕（聊天鈕左邊） -->
-<button class="chat-fab" id="game-fab" title="Game 遊戲 ゲーム" aria-label="Open game" style="right:96px;background:linear-gradient(135deg,#22C55E,#16a34a)" onclick="document.getElementById('game-panel').classList.toggle('open');document.getElementById('chat-panel').classList.remove('open')">🎮</button>
+<a href="/game" class="chat-fab" id="game-fab" title="Game 遊戲 ゲーム" aria-label="Open game" style="right:96px;background:linear-gradient(135deg,#22C55E,#16a34a);display:flex;align-items:center;justify-content:center;text-decoration:none">🎮</a>
 
 <!-- 聊天浮動鈕 -->
 <button class="chat-fab" id="chat-fab" title="Chat 聊天 チャット" aria-label="Open chat" onclick="document.getElementById('chat-panel').classList.toggle('open');document.getElementById('game-panel').classList.remove('open')">💬</button>
@@ -1233,14 +1233,6 @@ python3 trump_code_cli.py json</pre>
   <iframe src="/chat" title="Trump Code Chatbot"></iframe>
 </div>
 
-<!-- 遊戲面板（跟聊天面板同樣式） -->
-<div class="chat-panel" id="game-panel" style="right:96px">
-  <div class="chat-head">
-    <span>🎮 Prediction Game</span>
-    <button class="chat-close" id="game-close" aria-label="Close game">✕</button>
-  </div>
-  <iframe src="/game" title="Trump Code Game" style="flex:1;border:none;background:var(--navy)"></iframe>
-</div>
 
 <script>
 /* === 工具函數 === */
@@ -1289,9 +1281,7 @@ animateRefresh('rf2', 30);
 animateRefresh('rf3', 60);
 
 /* === 聊天面板 === */
-/* onclick 已在 HTML button 上，這裡只處理關閉按鈕 */
 $('chat-close').addEventListener('click', () => $('chat-panel').classList.remove('open'));
-$('game-close').addEventListener('click', () => $('game-panel').classList.remove('open'));
 
 /* === 捲動到頂 === */
 const scrollBtn = $('scroll-top');
