@@ -180,15 +180,11 @@ pip install -r requirements.txt
 # 查看今日訊號
 python3 trump_code_cli.py signals
 
-# 跑任一分析腳本（共 12 個）
-python3 analysis_06_market.py    # 貼文 vs S&P 500 相關性
-python3 analysis_09_combo_score.py  # 多訊號組合評分
-
-# 跑暴力搜尋（約 25 分鐘）
-python3 overnight_search.py
-
 # 啟動即時監控
 python3 realtime_loop.py
+
+# 手動跑一次包裝提醒
+bash ./notify_wrapper.sh
 
 # 啟動網頁儀表板 + 聊天機器人
 export GEMINI_KEYS="key1,key2,key3"
