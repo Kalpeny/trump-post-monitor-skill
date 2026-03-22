@@ -264,7 +264,6 @@ trump-code/
 ├── rule_evolver.py               # Crossover/mutation/distill
 ├── circuit_breaker.py            # System health + auto-pause
 ├── event_detector.py             # Multi-day event patterns
-├── dual_platform_signal.py       # Truth Social vs X analysis
 ├── polymarket_client.py          # Polymarket API client
 ├── kalshi_client.py              # Kalshi API client
 ├── arbitrage_engine.py           # Cross-platform arbitrage
@@ -350,5 +349,8 @@ Powered by brute-force computation, not gut feeling.
 *If you find patterns we missed, [open an issue](https://github.com/sstklen/trump-code/issues). Let's decode this together.*
 
 ⭐ **Star this repo to follow the live decoding.**
+
+</div>
+*
 
 </div>

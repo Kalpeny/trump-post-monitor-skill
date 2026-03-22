@@ -260,7 +260,6 @@ trump-code/
 ├── rule_evolver.py               # 交叉 / 突變 / 提煉
 ├── circuit_breaker.py            # 系統健康 + 自動暫停
 ├── event_detector.py             # 多日事件模式偵測
-├── dual_platform_signal.py       # Truth Social vs X 分析
 ├── polymarket_client.py          # Polymarket API 客戶端
 ├── kalshi_client.py              # Kalshi API 客戶端
 ├── arbitrage_engine.py           # 跨平台套利引擎
@@ -309,3 +308,4 @@ trump-code/
 ⭐ **按下 Star 追蹤即時解碼進度。**
 
 </div>
+div>

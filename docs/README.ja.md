@@ -260,7 +260,6 @@ trump-code/
 ├── rule_evolver.py               # 交叉／突然変異／蒸留
 ├── circuit_breaker.py            # システム健全性 + 自動一時停止
 ├── event_detector.py             # 複数日イベントパターンの検知
-├── dual_platform_signal.py       # Truth Social vs X 分析
 ├── polymarket_client.py          # Polymarket API クライアント
 ├── kalshi_client.py              # Kalshi API クライアント
 ├── arbitrage_engine.py           # クロスプラットフォームのアービトラージ
