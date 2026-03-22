@@ -18,17 +18,19 @@ log() {
 
 fail() {
     log "error: $*"
-    exit 1
+    printf '🚨 TRUMP MONITOR ERROR\n%s\n' "$*"
+    exit 0
 }
 
 exec 9>"$LOCK_FILE"
 if ! flock -n 9; then
     log "skip: previous notify_wrapper still running"
+    printf 'NO_REPLY\n'
     exit 0
 fi
 
-PREV_LAST_SEEN=""
-if [ -f "data/rt_last_seen.txt" ]; then
+PREV_LAST_SEEN="${FORCE_REPLAY_SINCE:-}"
+if [ -z "$PREV_LAST_SEEN" ] && [ -f "data/rt_last_seen.txt" ]; then
     PREV_LAST_SEEN=$(cat "data/rt_last_seen.txt" 2>/dev/null || true)
 fi
 
@@ -53,15 +55,16 @@ if ! OUTPUT=$(timeout "$TIMEOUT_SECONDS" python3 realtime_loop.py --once 2>&1); 
         *)
             log "realtime_loop failed with exit=$status"
             printf '%s\n' "$OUTPUT" | tail -n 80 >> "$LOG_FILE"
-            exit 1
+            fail "realtime_loop failed with exit=$status"
             ;;
     esac
 fi
 
 printf '%s\n' "$OUTPUT" | tail -n 80 >> "$LOG_FILE"
 
-if ! printf '%s\n' "$OUTPUT" | grep -q "🆕 偵測到 .* 篇新推文！"; then
+if [ -z "${FORCE_REPLAY_SINCE:-}" ] && ! printf '%s\n' "$OUTPUT" | grep -q "🆕 偵測到 .* 篇新推文！"; then
     log "no new post detected"
+    printf 'NO_REPLY\n'
     exit 0
 fi
 
@@ -87,8 +90,7 @@ PY
 )
 
 if [ -z "$NEW_POSTS_RAW" ]; then
-    log "new post detected in realtime_loop output but failed to extract posts newer than previous rt_last_seen"
-    exit 0
+    fail "new post detected in realtime_loop output but failed to extract posts newer than previous rt_last_seen"
 fi
 
 POST_COUNT=$(printf '%s\n' "$OUTPUT" | sed -n 's/.*🆕 偵測到 \([0-9][0-9]*\) 篇新推文！.*/\1/p' | head -n 1)
@@ -133,16 +135,17 @@ else:
 
 msg = []
 if urgency == 'high':
-    msg.append("🚨 **TRUMP MARKET ALERT** 🚨")
+    msg.append('🚨 **TRUMP MARKET ALERT** 🚨')
 elif urgency == 'medium' and trading_posts > 0:
-    msg.append("⚠️ **TRUMP MARKET WATCH** ⚠️")
+    msg.append('⚠️ **TRUMP MARKET WATCH** ⚠️')
 else:
-    msg.append("📰 **TRUMP POST UPDATE**")
+    msg.append('📰 **TRUMP POST UPDATE**')
 
 if themes:
-    msg.append(f"\n[ 核心催化剂 ]\n{themes}")
+    msg.append(f'\n[ 核心催化剂 ]\n{themes}')
 
-msg.append(f"\n[ 市场定调 ]\n{bias_label}")
+msg.append(f'\n[ 市场定调 ]\n{bias_label}')
+msg.append(f'\n[ 信号等级 ]\nUrgency: {urgency.upper()} | Trading posts: {trading_posts}/{post_count}')
 
 watchlist = market_data.get('watchlist', [])
 if watchlist:
@@ -151,36 +154,42 @@ if watchlist:
     crypto = [t for t in watchlist if t in ['BTC', 'ETH', 'COIN', 'MSTR', 'IBIT']]
     others = [t for t in watchlist if t not in defense and t not in tech and t not in crypto]
 
-    msg.append("\n[ 关注标的 ]")
+    msg.append('\n[ 关注标的 ]')
     if defense: msg.append(f"🛡️ 防务/能源/避险: {', '.join(defense)}")
     if tech: msg.append(f"🚀 大盘/科技: {', '.join(tech)}")
     if crypto: msg.append(f"🪙 加密资产: {', '.join(crypto)}")
     if others: msg.append(f"📌 其他相关: {', '.join(others)}")
 
 if important_posts:
-    msg.append("\n[ 原文速递 ]")
+    msg.append('\n[ 原文速递 ]')
     for i, p in enumerate(important_posts[:max_posts]):
         created = p.get('created_at', '')
         short_time = re.sub(r'.*-(\d{2}-\d{2})T(\d{2}:\d{2}).*', r'\1 \2', created)
         content = p.get('content', '')
-        if len(content) > 1500: content = content[:1499] + '…'
-        msg.append(f"🕒 {short_time}\n{content}")
+        if len(content) > 1500:
+            content = content[:1499] + '…'
+        msg.append(f'🕒 {short_time}\n{content}')
         if i < len(important_posts[:max_posts]) - 1:
-            msg.append("---")
+            msg.append('---')
 
-msg.append("\n[ 交易推演 ]")
+msg.append('\n[ 交易推演 ]')
 if len(notes) > 0:
-    msg.append(f"▸ 逻辑：{notes[0]}")
+    msg.append(f'▸ 逻辑：{notes[0]}')
 if len(notes) > 1:
-    msg.append(f"▸ 细节：{notes[1]}")
-msg.append(f"▸ 策略：{action_hint}")
-
-msg.append(f"\n📊 大盘: SPY {spy} | VIX {vix}")
+    msg.append(f'▸ 细节：{notes[1]}')
+msg.append(f'▸ 策略：{action_hint}')
+msg.append(f'\n📊 大盘: SPY {spy} | VIX {vix}')
 print('\n'.join(msg))
 PY
 )
 
 BIAS=$(printf '%s' "$MARKET_JSON" | jq -r '.bias // "unknown"')
 URGENCY=$(printf '%s' "$MARKET_JSON" | jq -r '.urgency // "unknown"')
-log "alert generated successfully for ${POST_COUNT} new post(s); bias=${BIAS} urgency=${URGENCY}"
+TRADING_POSTS=$(printf '%s' "$MARKET_JSON" | jq -r '.trading_posts // 0')
+log "alert generated successfully for ${POST_COUNT} new post(s); bias=${BIAS} urgency=${URGENCY} trading_posts=${TRADING_POSTS}"
+if [ "$FINAL_MSG" = "NO_REPLY" ]; then
+    log "suppressed low-signal post batch"
+    printf 'NO_REPLY\n'
+    exit 0
+fi
 printf '%b\n' "$FINAL_MSG"
