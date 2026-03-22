@@ -250,9 +250,7 @@ trump-code/
 ├── public/insights.html          # 儀表板（單一檔案，免打包）
 ├── chatbot_server.py             # Web 伺服器 + 所有 API endpoints
 ├── realtime_loop.py              # 即時監控（每 5 分鐘）
-├── daily_pipeline.py             # 每日流水線（11 個步驟）
-├── learning_engine.py            # 升級 / 降級 / 淘汰規則
-├── rule_evolver.py               # 交叉 / 突變 / 提煉
+├── daily_pipeline.py             # 每日流水線
 ├── circuit_breaker.py            # 系統健康 + 自動暫停
 ├── event_detector.py             # 多日事件模式偵測
 ├── polymarket_client.py          # Polymarket API 客戶端
@@ -261,18 +259,6 @@ trump-code/
 ├── mcp_server.py                 # MCP server（9 個工具）
 ├── trump_code_cli.py             # CLI 介面
 ├── trump_monitor.py              # 貼文監控器
-├── analysis_01_caps.py           # 大寫密碼分析
-├── analysis_02_timing.py         # 發文時間規律
-├── analysis_03_hidden.py         # 隱藏訊息（藏頭詩式）
-├── analysis_04_entities.py       # 國家與人名提及
-├── analysis_05_anomaly.py        # 異常偵測
-├── analysis_06_market.py         # 貼文 vs S&P 500
-├── analysis_07_signal_sequence.py # 訊號序列分析
-├── analysis_08_backtest.py       # 策略回測
-├── analysis_09_combo_score.py    # 多訊號評分
-├── analysis_10_code_change.py    # 署名變化偵測
-├── analysis_11_brute_force.py    # 暴力搜尋規則
-├── analysis_12_big_moves.py      # 大行情預測
 ├── data/                         # 所有資料（100% 公開）
 └── tests/                        # 測試套件
 ```

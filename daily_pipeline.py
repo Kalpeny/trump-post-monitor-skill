@@ -135,7 +135,7 @@ def fetch_market():
 # 步驟 3: 計算今日信號
 # ============================================================
 
-# KEYWORDS 清單與 overnight_search.py 完全一致
+# KEYWORDS 清單沿用既有日內/日級特徵邏輯
 KEYWORDS = [
     # 政策
     'tariff', 'tariffs', 'deal', 'trade', 'agreement', 'negotiate',
@@ -169,7 +169,7 @@ KEYWORDS = [
 
 
 def compute_day_features(day_posts, daily_posts_all=None, sorted_dates_all=None, date_idx=None):
-    """計算一天的所有特徵 — 邏輯與 overnight_search.py 的 compute_features() 完全一致"""
+    """計算一天的所有特徵，供日級信號與後續流程共用。"""
     f = {}
     if not day_posts:
         return f
@@ -746,4 +746,6 @@ def main():
 
 
 if __name__ == '__main__':
+    main()
+__ == '__main__':
     main()

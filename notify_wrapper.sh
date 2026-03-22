@@ -71,30 +71,37 @@ fi
 NEW_POSTS_RAW=$(python3 - "$PREV_LAST_SEEN" <<'PY'
 import json, sys
 from pathlib import Path
-prev = sys.argv[1] if len(sys.argv) > 1 else ''
+prev = (sys.argv[1] if len(sys.argv) > 1 else '').strip()
 p = Path('data/trump_posts_all.json')
 if not p.exists():
     sys.exit(0)
 with p.open('r', encoding='utf-8') as f:
     data = json.load(f)
 posts = data.get('posts', [])
-new_posts = [x for x in posts if x.get('created_at', '') > prev]
-new_posts.sort(key=lambda x: x.get('created_at', ''), reverse=True)
-for x in new_posts[:5]:
-    created = x.get('created_at', '')
+posts.sort(key=lambda x: x.get('created_at', ''), reverse=True)
+new_posts = [x for x in posts if (x.get('created_at', '') or '').strip() > prev]
+selected = new_posts[:5]
+if not selected:
+    # fallback: realtime_loop may detect posts via seen/source state even when rt_last_seen
+    # does not move in a way that makes strict timestamp comparison reliable.
+    selected = posts[:5]
+for x in selected:
+    created = (x.get('created_at', '') or '').strip()
     content = (x.get('content', '') or '').replace('\n', ' ').strip()
+    if not created or not content:
+        continue
     print(created)
     print(content)
     print('---')
 PY
 )
 
-if [ -z "$NEW_POSTS_RAW" ]; then
-    fail "new post detected in realtime_loop output but failed to extract posts newer than previous rt_last_seen"
-fi
-
 POST_COUNT=$(printf '%s\n' "$OUTPUT" | sed -n 's/.*🆕 偵測到 \([0-9][0-9]*\) 篇新推文！.*/\1/p' | head -n 1)
 [ -z "$POST_COUNT" ] && POST_COUNT=$(printf '%s\n' "$NEW_POSTS_RAW" | grep -c '^---$' || true)
+
+if [ -z "$NEW_POSTS_RAW" ] || [ "$POST_COUNT" = "0" ]; then
+    fail "new post detected in realtime_loop output but failed to extract usable post content"
+fi
 
 MARKET_JSON=$(printf '%s\n' "$NEW_POSTS_RAW" | python3 market_context.py)
 SPY=$(printf '%s\n' "$OUTPUT" | grep 'SPY:' | head -n 1 | grep -o 'SPY: [^|]*' | sed -e 's/^[[:space:]]*//' -e 's/SPY: //')
