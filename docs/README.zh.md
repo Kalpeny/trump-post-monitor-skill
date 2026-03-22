@@ -157,7 +157,6 @@ Base URL：`https://trumpcode.washinmura.jp`
 |------|------|----------|
 | `trump_posts_all.json` | Truth Social 完整存檔（44,000+ 篇） | 每日 |
 | `trump_posts_lite.json` | 已預標記訊號的貼文 | 每日 |
-| `x_posts_full.json` | X（Twitter）完整存檔 | 每日 |
 | `predictions_log.json` | 566 筆已驗收預測含結果 | 每日 |
 | `surviving_rules.json` | 551 條活躍規則（暴力搜尋 + 進化產出） | 每日 |
 | `daily_report.json` | 每日三語報告 | 每日 |

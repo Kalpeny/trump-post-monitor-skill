@@ -157,7 +157,6 @@
 |----------|------|---------|
 | `trump_posts_all.json` | Truth Social 完全アーカイブ（44,000件以上） | 毎日 |
 | `trump_posts_lite.json` | シグナルを事前タグ付けした投稿 | 毎日 |
-| `x_posts_full.json` | X（Twitter）完全アーカイブ | 毎日 |
 | `predictions_log.json` | 566件の検証済み予測と結果 | 毎日 |
 | `surviving_rules.json` | 551件のアクティブルール（ブルートフォース + 進化） | 毎日 |
 | `daily_report.json` | 毎日の3言語レポート | 毎日 |

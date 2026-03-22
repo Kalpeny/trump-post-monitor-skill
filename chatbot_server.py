@@ -1315,7 +1315,7 @@ class ChatHandler(BaseHTTPRequestHandler):
                 'opus_analysis.json', 'learning_report.json',
                 'evolution_log.json', 'circuit_breaker_state.json',
                 'daily_report.json', 'polymarket_live.json',
-                'own_archive.json', 'x_posts_full.json',
+                'own_archive.json',
             ]
             if filename in allowed:
                 filepath = DATA / filename
