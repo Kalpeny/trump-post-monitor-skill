@@ -111,6 +111,12 @@ bias = market_data.get('bias', 'neutral')
 urgency = market_data.get('urgency', 'low')
 important_posts = market_data.get('important_posts', [])
 notes = market_data.get('notes', [])
+trading_posts = int(market_data.get('trading_posts', 0) or 0)
+post_count = int(market_data.get('post_count', 0) or 0)
+
+if urgency == 'low' and trading_posts == 0:
+    print('NO_REPLY')
+    raise SystemExit
 
 if bias == 'risk-on':
     bias_label = '🟢 偏 Risk-On / 风险偏好回升'
@@ -128,7 +134,7 @@ else:
 msg = []
 if urgency == 'high':
     msg.append("🚨 **TRUMP MARKET ALERT** 🚨")
-elif themes:
+elif urgency == 'medium' and trading_posts > 0:
     msg.append("⚠️ **TRUMP MARKET WATCH** ⚠️")
 else:
     msg.append("📰 **TRUMP POST UPDATE**")
