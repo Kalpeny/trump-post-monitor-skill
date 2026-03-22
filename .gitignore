@@ -20,6 +20,9 @@ __pycache__/
 last_seen_post.txt
 alerts_log.json
 overnight_log.txt
+.notify_wrapper.lock
+logs/
+data/rt_seen_posts.json
 
 # 安全
 .env
