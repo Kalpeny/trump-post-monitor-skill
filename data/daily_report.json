@@ -1,15 +1,13 @@
 {
-  "date": "2026-04-08",
-  "generated_at": "2026-04-08T15:04:11Z",
-  "posts_today": 7,
+  "date": "2026-04-09",
+  "generated_at": "2026-04-09T15:16:26Z",
+  "posts_today": 3,
   "latest_post": {
-    "time": "2026-04-08T11:30",
-    "content_preview": "A Country supplying Military Weapons to Iran will be immediately tariffed, on any and all goods sold"
+    "time": "2026-04-09T12:40",
+    "content_preview": "None of these people, including our own, very disappointing, NATO, understood anything unless they h"
   },
   "signals_detected": [
-    "TARIFF",
-    "IRAN",
-    "TARIFF_ONLY"
+    "IRAN"
   ],
   "models_triggered": 0,
   "direction_summary": {
@@ -23,13 +21,13 @@
     "rate": 0.0
   },
   "sp500_latest": {
-    "date": "2026-04-08",
-    "close": 6760.06
+    "date": "2026-04-09",
+    "close": 6784.3
   },
   "summary": {
-    "en": "Trump Code Daily Report -- 2026-04-08\nPosts today: 7 | Models triggered: 0\nSignals: TARIFF, IRAN, TARIFF_ONLY\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 0.0% (0/0)\nLatest post: A Country supplying Military Weapons to Iran will be immediately tariffed, on any and all goods sold",
-    "zh": "川普密碼每日報告 -- 2026-04-08\n今日推文: 7 篇 | 觸發模型: 0 組\n偵測信號: 關稅, 伊朗, 只有關稅沒有Deal\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 0.0% (0/0)\n最新推文: A Country supplying Military Weapons to Iran will be immediately tariffed, on any and all goods sold",
-    "ja": "トランプ・コード日次レポート -- 2026-04-08\n本日の投稿: 7件 | トリガーモデル: 0組\n検出シグナル: 関税, イラン, 関税のみ（Deal無し）\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 0.0% (0/0)\n最新投稿: A Country supplying Military Weapons to Iran will be immediately tariffed, on any and all goods sold"
+    "en": "Trump Code Daily Report -- 2026-04-09\nPosts today: 3 | Models triggered: 0\nSignals: IRAN\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 0.0% (0/0)\nLatest post: None of these people, including our own, very disappointing, NATO, understood anything unless they h",
+    "zh": "川普密碼每日報告 -- 2026-04-09\n今日推文: 3 篇 | 觸發模型: 0 組\n偵測信號: 伊朗\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 0.0% (0/0)\n最新推文: None of these people, including our own, very disappointing, NATO, understood anything unless they h",
+    "ja": "トランプ・コード日次レポート -- 2026-04-09\n本日の投稿: 3件 | トリガーモデル: 0組\n検出シグナル: イラン\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 0.0% (0/0)\n最新投稿: None of these people, including our own, very disappointing, NATO, understood anything unless they h"
   },
   "triggered_rules_sample": []
 }
