@@ -474,5 +474,19 @@
       "IRAN"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-04-22",
+    "posts": 14,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "TARIFF",
+      "DEAL",
+      "CHINA",
+      "IRAN"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
