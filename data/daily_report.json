@@ -1,12 +1,14 @@
 {
-  "date": "2026-05-02",
-  "generated_at": "2026-05-02T14:42:22Z",
-  "posts_today": 2,
+  "date": "2026-05-03",
+  "generated_at": "2026-05-03T14:43:31Z",
+  "posts_today": 6,
   "latest_post": {
-    "time": "2026-05-02T03:40",
-    "content_preview": "This is what our Country was before, and after, \"TRUMP!\""
+    "time": "2026-05-02T23:12",
+    "content_preview": "I hate seeing Fox, and other Conservative Outlets, constantly making Low Rated Bill Maher \"relevant\""
   },
-  "signals_detected": [],
+  "signals_detected": [
+    "IRAN"
+  ],
   "models_triggered": 0,
   "direction_summary": {
     "LONG": 0,
@@ -23,9 +25,9 @@
     "close": 7230.12
   },
   "summary": {
-    "en": "Trump Code Daily Report -- 2026-05-02\nPosts today: 2 | Models triggered: 0\nSignals: None\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 0.0% (0/0)\nLatest post: This is what our Country was before, and after, \"TRUMP!\"",
-    "zh": "川普密碼每日報告 -- 2026-05-02\n今日推文: 2 篇 | 觸發模型: 0 組\n偵測信號: 無\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 0.0% (0/0)\n最新推文: This is what our Country was before, and after, \"TRUMP!\"",
-    "ja": "トランプ・コード日次レポート -- 2026-05-02\n本日の投稿: 2件 | トリガーモデル: 0組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 0.0% (0/0)\n最新投稿: This is what our Country was before, and after, \"TRUMP!\""
+    "en": "Trump Code Daily Report -- 2026-05-03\nPosts today: 6 | Models triggered: 0\nSignals: IRAN\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 0.0% (0/0)\nLatest post: I hate seeing Fox, and other Conservative Outlets, constantly making Low Rated Bill Maher \"relevant\"",
+    "zh": "川普密碼每日報告 -- 2026-05-03\n今日推文: 6 篇 | 觸發模型: 0 組\n偵測信號: 伊朗\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 0.0% (0/0)\n最新推文: I hate seeing Fox, and other Conservative Outlets, constantly making Low Rated Bill Maher \"relevant\"",
+    "ja": "トランプ・コード日次レポート -- 2026-05-03\n本日の投稿: 6件 | トリガーモデル: 0組\n検出シグナル: イラン\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 0.0% (0/0)\n最新投稿: I hate seeing Fox, and other Conservative Outlets, constantly making Low Rated Bill Maher \"relevant\""
   },
   "triggered_rules_sample": []
 }
