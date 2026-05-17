@@ -744,5 +744,16 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-05-17",
+    "posts": 7,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "CHINA"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
