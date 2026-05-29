@@ -861,5 +861,19 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-05-29",
+    "posts": 7,
+    "triggered": 3,
+    "long": 3,
+    "short": 0,
+    "signals": [
+      "DEAL",
+      "CHINA",
+      "IRAN",
+      "DEAL_ONLY"
+    ],
+    "consensus": "BULLISH"
   }
 ]
