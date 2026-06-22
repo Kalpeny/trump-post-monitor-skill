@@ -1,21 +1,17 @@
 {
-  "date": "2026-06-21",
-  "generated_at": "2026-06-21T15:47:37Z",
-  "posts_today": 7,
+  "date": "2026-06-22",
+  "generated_at": "2026-06-22T18:10:41Z",
+  "posts_today": 3,
   "latest_post": {
-    "time": "2026-06-21T13:59",
-    "content_preview": "Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very import"
+    "time": "2026-06-22T13:28",
+    "content_preview": "Of the MANY Statues and Fountains that we rebuilt, renovated, cleaned, and fixed, the only one that "
   },
-  "signals_detected": [
-    "DEAL",
-    "IRAN",
-    "DEAL_ONLY"
-  ],
-  "models_triggered": 4,
+  "signals_detected": [],
+  "models_triggered": 0,
   "direction_summary": {
-    "LONG": 4,
+    "LONG": 0,
     "SHORT": 0,
-    "consensus": "BULLISH"
+    "consensus": "NEUTRAL"
   },
   "historical_hit_rate": {
     "verified": 11,
@@ -23,56 +19,13 @@
     "rate": 100.0
   },
   "sp500_latest": {
-    "date": "2026-06-18",
-    "close": 7500.58
+    "date": "2026-06-22",
+    "close": 7478.22
   },
   "summary": {
-    "en": "Trump Code Daily Report -- 2026-06-21\nPosts today: 7 | Models triggered: 4\nSignals: DEAL, IRAN, DEAL_ONLY\nConsensus: 4 LONG vs 0 SHORT\nHistorical hit rate: 100.0% (11/11)\nLatest post: Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very import",
-    "zh": "川普密碼每日報告 -- 2026-06-21\n今日推文: 7 篇 | 觸發模型: 4 組\n偵測信號: Deal, 伊朗, 只有Deal沒有關稅\n共識方向: 4 組看多 vs 0 組看空\n歷史命中率: 100.0% (11/11)\n最新推文: Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very import",
-    "ja": "トランプ・コード日次レポート -- 2026-06-21\n本日の投稿: 7件 | トリガーモデル: 4組\n検出シグナル: ディール, イラン, Dealのみ（関税無し）\nコンセンサス: 4組ロング vs 0組ショート\n過去の的中率: 100.0% (11/11)\n最新投稿: Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very import"
+    "en": "Trump Code Daily Report -- 2026-06-22\nPosts today: 3 | Models triggered: 0\nSignals: None\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 100.0% (11/11)\nLatest post: Of the MANY Statues and Fountains that we rebuilt, renovated, cleaned, and fixed, the only one that ",
+    "zh": "川普密碼每日報告 -- 2026-06-22\n今日推文: 3 篇 | 觸發模型: 0 組\n偵測信號: 無\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 100.0% (11/11)\n最新推文: Of the MANY Statues and Fountains that we rebuilt, renovated, cleaned, and fixed, the only one that ",
+    "ja": "トランプ・コード日次レポート -- 2026-06-22\n本日の投稿: 3件 | トリガーモデル: 0組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 100.0% (11/11)\n最新投稿: Of the MANY Statues and Fountains that we rebuilt, renovated, cleaned, and fixed, the only one that "
   },
-  "triggered_rules_sample": [
-    {
-      "features": [
-        "kw_deal",
-        "kw_perfect",
-        "kw_thank_you_for_your_attention"
-      ],
-      "direction": "LONG",
-      "hold": 2,
-      "train_wr": 100.0,
-      "test_wr": 100.0
-    },
-    {
-      "features": [
-        "kw_deal",
-        "kw_perfect"
-      ],
-      "direction": "LONG",
-      "hold": 2,
-      "train_wr": 100.0,
-      "test_wr": 100.0
-    },
-    {
-      "features": [
-        "kw_deal",
-        "kw_perfect"
-      ],
-      "direction": "LONG",
-      "hold": 3,
-      "train_wr": 100.0,
-      "test_wr": 100.0
-    },
-    {
-      "features": [
-        "kw_deal",
-        "kw_perfect",
-        "kw_thank_you_for_your_attention"
-      ],
-      "direction": "LONG",
-      "hold": 3,
-      "train_wr": 100.0,
-      "test_wr": 100.0
-    }
-  ]
+  "triggered_rules_sample": []
 }
