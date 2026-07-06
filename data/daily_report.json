@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-05",
-  "generated_at": "2026-07-05T15:08:49Z",
-  "posts_today": 4,
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T16:49:11Z",
+  "posts_today": 8,
   "latest_post": {
-    "time": "2026-07-05T04:36",
-    "content_preview": "Best fireworks show, EVER! President DJT"
+    "time": "2026-07-06T15:12",
+    "content_preview": "From Greg Wischer at the United States Department of the Interior: \"The regilding of the sculpture \""
   },
   "signals_detected": [],
   "models_triggered": 0,
@@ -19,13 +19,13 @@
     "rate": 100.0
   },
   "sp500_latest": {
-    "date": "2026-07-02",
-    "close": 7483.24
+    "date": "2026-07-06",
+    "close": 7537.22
   },
   "summary": {
-    "en": "Trump Code Daily Report -- 2026-07-05\nPosts today: 4 | Models triggered: 0\nSignals: None\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 100.0% (11/11)\nLatest post: Best fireworks show, EVER! President DJT",
-    "zh": "川普密碼每日報告 -- 2026-07-05\n今日推文: 4 篇 | 觸發模型: 0 組\n偵測信號: 無\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 100.0% (11/11)\n最新推文: Best fireworks show, EVER! President DJT",
-    "ja": "トランプ・コード日次レポート -- 2026-07-05\n本日の投稿: 4件 | トリガーモデル: 0組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 100.0% (11/11)\n最新投稿: Best fireworks show, EVER! President DJT"
+    "en": "Trump Code Daily Report -- 2026-07-06\nPosts today: 8 | Models triggered: 0\nSignals: None\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 100.0% (11/11)\nLatest post: From Greg Wischer at the United States Department of the Interior: \"The regilding of the sculpture \"",
+    "zh": "川普密碼每日報告 -- 2026-07-06\n今日推文: 8 篇 | 觸發模型: 0 組\n偵測信號: 無\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 100.0% (11/11)\n最新推文: From Greg Wischer at the United States Department of the Interior: \"The regilding of the sculpture \"",
+    "ja": "トランプ・コード日次レポート -- 2026-07-06\n本日の投稿: 8件 | トリガーモデル: 0組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 100.0% (11/11)\n最新投稿: From Greg Wischer at the United States Department of the Interior: \"The regilding of the sculpture \""
   },
   "triggered_rules_sample": []
 }
