@@ -1309,5 +1309,17 @@
       "DEAL"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-07-08",
+    "posts": 12,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "DEAL",
+      "DEAL_ONLY"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
