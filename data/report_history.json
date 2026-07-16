@@ -1397,5 +1397,17 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-07-16",
+    "posts": 6,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "DEAL",
+      "DEAL_ONLY"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
