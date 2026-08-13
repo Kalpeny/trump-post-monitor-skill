@@ -1676,5 +1676,16 @@
       "IRAN"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-08-13",
+    "posts": 28,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "IRAN"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
