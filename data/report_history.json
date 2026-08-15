@@ -1700,5 +1700,18 @@
       "TARIFF_ONLY"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-08-15",
+    "posts": 10,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "TARIFF",
+      "CHINA",
+      "TARIFF_ONLY"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
