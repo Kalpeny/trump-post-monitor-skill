@@ -1790,5 +1790,17 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-08-23",
+    "posts": 2,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "TARIFF",
+      "TARIFF_ONLY"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
