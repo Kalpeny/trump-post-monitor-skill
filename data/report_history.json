@@ -1802,5 +1802,19 @@
       "TARIFF_ONLY"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-08-24",
+    "posts": 20,
+    "triggered": 1,
+    "long": 0,
+    "short": 1,
+    "signals": [
+      "TARIFF",
+      "DEAL",
+      "CHINA",
+      "IRAN"
+    ],
+    "consensus": "BEARISH"
   }
 ]
