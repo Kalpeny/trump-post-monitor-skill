@@ -1816,5 +1816,18 @@
       "IRAN"
     ],
     "consensus": "BEARISH"
+  },
+  {
+    "date": "2026-08-25",
+    "posts": 10,
+    "triggered": 2,
+    "long": 2,
+    "short": 0,
+    "signals": [
+      "TARIFF",
+      "DEAL",
+      "IRAN"
+    ],
+    "consensus": "BULLISH"
   }
 ]
