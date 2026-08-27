@@ -1838,5 +1838,18 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-08-27",
+    "posts": 13,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "DEAL",
+      "IRAN",
+      "DEAL_ONLY"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
