@@ -1904,5 +1904,16 @@
       "TARIFF_ONLY"
     ],
     "consensus": "BEARISH"
+  },
+  {
+    "date": "2026-09-01",
+    "posts": 7,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "IRAN"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
