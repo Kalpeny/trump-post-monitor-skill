@@ -1937,5 +1937,18 @@
       "IRAN"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-09-04",
+    "posts": 11,
+    "triggered": 5,
+    "long": 5,
+    "short": 0,
+    "signals": [
+      "TARIFF",
+      "DEAL",
+      "IRAN"
+    ],
+    "consensus": "BULLISH"
   }
 ]
