@@ -2119,5 +2119,18 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-09-21",
+    "posts": 17,
+    "triggered": 4,
+    "long": 2,
+    "short": 2,
+    "signals": [
+      "DEAL",
+      "CHINA",
+      "DEAL_ONLY"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
