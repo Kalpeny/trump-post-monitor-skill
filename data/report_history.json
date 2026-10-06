@@ -2291,5 +2291,17 @@
       "DEAL_ONLY"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-10-06",
+    "posts": 12,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "TARIFF",
+      "TARIFF_ONLY"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
