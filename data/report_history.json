@@ -2418,5 +2418,16 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-10-18",
+    "posts": 6,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "IRAN"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
