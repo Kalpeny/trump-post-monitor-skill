@@ -2429,5 +2429,16 @@
       "IRAN"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-10-19",
+    "posts": 22,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "IRAN"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
