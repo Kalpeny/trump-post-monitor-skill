@@ -2453,5 +2453,17 @@
       "TARIFF_ONLY"
     ],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-10-21",
+    "posts": 15,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [
+      "DEAL",
+      "DEAL_ONLY"
+    ],
+    "consensus": "NEUTRAL"
   }
 ]
