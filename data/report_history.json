@@ -2540,5 +2540,14 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-10-29",
+    "posts": 23,
+    "triggered": 1,
+    "long": 0,
+    "short": 1,
+    "signals": [],
+    "consensus": "BEARISH"
   }
 ]

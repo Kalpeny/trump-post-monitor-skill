@@ -1,17 +1,17 @@
 {
-  "date": "2026-10-28",
-  "generated_at": "2026-10-28T19:13:12Z",
-  "posts_today": 2,
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T19:22:43Z",
+  "posts_today": 23,
   "latest_post": {
-    "time": "2026-10-28T14:42",
-    "content_preview": "https://events.gop.com/events/midterm-rally-in-chillicothe-ohio-with-president-donald-j-trump-djt47"
+    "time": "2026-10-29T19:14",
+    "content_preview": "Congressman Ryan Mackenzie is an America First Patriot, who is doing an incredible job representing "
   },
   "signals_detected": [],
-  "models_triggered": 0,
+  "models_triggered": 1,
   "direction_summary": {
     "LONG": 0,
-    "SHORT": 0,
-    "consensus": "NEUTRAL"
+    "SHORT": 1,
+    "consensus": "BEARISH"
   },
   "historical_hit_rate": {
     "verified": 12,
@@ -19,13 +19,25 @@
     "rate": 91.7
   },
   "sp500_latest": {
-    "date": "2026-10-28",
-    "close": 7723.08
+    "date": "2026-10-29",
+    "close": 7702.54
   },
   "summary": {
-    "en": "Trump Code Daily Report -- 2026-10-28\nPosts today: 2 | Models triggered: 0\nSignals: None\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 91.7% (11/12)\nLatest post: https://events.gop.com/events/midterm-rally-in-chillicothe-ohio-with-president-donald-j-trump-djt47",
-    "zh": "川普密碼每日報告 -- 2026-10-28\n今日推文: 2 篇 | 觸發模型: 0 組\n偵測信號: 無\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 91.7% (11/12)\n最新推文: https://events.gop.com/events/midterm-rally-in-chillicothe-ohio-with-president-donald-j-trump-djt47",
-    "ja": "トランプ・コード日次レポート -- 2026-10-28\n本日の投稿: 2件 | トリガーモデル: 0組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 91.7% (11/12)\n最新投稿: https://events.gop.com/events/midterm-rally-in-chillicothe-ohio-with-president-donald-j-trump-djt47"
+    "en": "Trump Code Daily Report -- 2026-10-29\nPosts today: 23 | Models triggered: 1\nSignals: None\nConsensus: 0 LONG vs 1 SHORT\nHistorical hit rate: 91.7% (11/12)\nLatest post: Congressman Ryan Mackenzie is an America First Patriot, who is doing an incredible job representing ",
+    "zh": "川普密碼每日報告 -- 2026-10-29\n今日推文: 23 篇 | 觸發模型: 1 組\n偵測信號: 無\n共識方向: 0 組看多 vs 1 組看空\n歷史命中率: 91.7% (11/12)\n最新推文: Congressman Ryan Mackenzie is an America First Patriot, who is doing an incredible job representing ",
+    "ja": "トランプ・コード日次レポート -- 2026-10-29\n本日の投稿: 23件 | トリガーモデル: 1組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 1組ショート\n過去の的中率: 91.7% (11/12)\n最新投稿: Congressman Ryan Mackenzie is an America First Patriot, who is doing an incredible job representing "
   },
-  "triggered_rules_sample": []
+  "triggered_rules_sample": [
+    {
+      "features": [
+        "kw_america_first",
+        "kw_beautiful",
+        "kw_terrible"
+      ],
+      "direction": "SHORT",
+      "hold": 3,
+      "train_wr": 100.0,
+      "test_wr": 100.0
+    }
+  ]
 }
