@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-31",
-  "generated_at": "2026-10-31T18:04:59Z",
-  "posts_today": 4,
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T18:42:43Z",
+  "posts_today": 18,
   "latest_post": {
-    "time": "2026-10-31T18:03",
-    "content_preview": "PENNSYLVANIA, I am doing a TeleRally, NOW, for Stacy Garrity for Governor, Congressman Ryan Mackenzi"
+    "time": "2026-11-01T15:49",
+    "content_preview": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/117541971048661320TO THE GREAT PEOPLE OF "
   },
   "signals_detected": [],
   "models_triggered": 0,
@@ -23,9 +23,9 @@
     "close": 7580.07
   },
   "summary": {
-    "en": "Trump Code Daily Report -- 2026-10-31\nPosts today: 4 | Models triggered: 0\nSignals: None\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 91.7% (11/12)\nLatest post: PENNSYLVANIA, I am doing a TeleRally, NOW, for Stacy Garrity for Governor, Congressman Ryan Mackenzi",
-    "zh": "川普密碼每日報告 -- 2026-10-31\n今日推文: 4 篇 | 觸發模型: 0 組\n偵測信號: 無\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 91.7% (11/12)\n最新推文: PENNSYLVANIA, I am doing a TeleRally, NOW, for Stacy Garrity for Governor, Congressman Ryan Mackenzi",
-    "ja": "トランプ・コード日次レポート -- 2026-10-31\n本日の投稿: 4件 | トリガーモデル: 0組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 91.7% (11/12)\n最新投稿: PENNSYLVANIA, I am doing a TeleRally, NOW, for Stacy Garrity for Governor, Congressman Ryan Mackenzi"
+    "en": "Trump Code Daily Report -- 2026-11-01\nPosts today: 18 | Models triggered: 0\nSignals: None\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 91.7% (11/12)\nLatest post: RT: https://truthsocial.com/users/realDonaldTrump/statuses/117541971048661320TO THE GREAT PEOPLE OF ",
+    "zh": "川普密碼每日報告 -- 2026-11-01\n今日推文: 18 篇 | 觸發模型: 0 組\n偵測信號: 無\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 91.7% (11/12)\n最新推文: RT: https://truthsocial.com/users/realDonaldTrump/statuses/117541971048661320TO THE GREAT PEOPLE OF ",
+    "ja": "トランプ・コード日次レポート -- 2026-11-01\n本日の投稿: 18件 | トリガーモデル: 0組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 91.7% (11/12)\n最新投稿: RT: https://truthsocial.com/users/realDonaldTrump/statuses/117541971048661320TO THE GREAT PEOPLE OF "
   },
   "triggered_rules_sample": []
 }

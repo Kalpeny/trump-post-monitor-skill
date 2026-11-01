@@ -2567,5 +2567,14 @@
     "short": 0,
     "signals": [],
     "consensus": "NEUTRAL"
+  },
+  {
+    "date": "2026-11-01",
+    "posts": 18,
+    "triggered": 0,
+    "long": 0,
+    "short": 0,
+    "signals": [],
+    "consensus": "NEUTRAL"
   }
 ]
