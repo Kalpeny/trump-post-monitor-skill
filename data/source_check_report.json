@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-11-01T18:42:43Z",
+  "timestamp": "2026-11-02T22:33:00Z",
   "sources": {
     "cnn": {
       "status": "ok",
-      "count": 9315,
+      "count": 9421,
       "error": null
     },
     "trumpstruth": {
-      "status": "ok",
-      "count": 1,
+      "status": "partial",
+      "count": 0,
       "error": null
     },
     "truthsocial_direct": {
@@ -18,19 +18,13 @@
     }
   },
   "cross_check": {
-    "status": "ok",
-    "primary": "cnn",
-    "secondary": "trumpstruth",
-    "checked": 9,
-    "matched": 1,
-    "primary_only": 8,
-    "secondary_only": 0,
-    "match_rate": 11.1,
-    "verdict": "INCONSISTENT"
+    "status": "insufficient_sources",
+    "active_count": 1,
+    "note": "需要至少 2 個來源才能交叉比對"
   },
   "merge": {
     "primary_source": "cnn",
-    "total_posts": 9315,
+    "total_posts": 9421,
     "added_from_others": 0
   }
 }

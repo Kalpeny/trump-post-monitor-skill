@@ -1,12 +1,14 @@
 {
-  "date": "2026-11-01",
-  "generated_at": "2026-11-01T18:42:43Z",
-  "posts_today": 18,
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T22:33:00Z",
+  "posts_today": 63,
   "latest_post": {
-    "time": "2026-11-01T15:49",
-    "content_preview": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/117541971048661320TO THE GREAT PEOPLE OF "
+    "time": "2026-11-02T21:32",
+    "content_preview": "TO THE GREAT PEOPLE OF GEORGIA, GET OUT AND VOTE FOR:– Mike Collins for U.S. Senate– Rick Jackson fo"
   },
-  "signals_detected": [],
+  "signals_detected": [
+    "IRAN"
+  ],
   "models_triggered": 0,
   "direction_summary": {
     "LONG": 0,
@@ -19,13 +21,13 @@
     "rate": 91.7
   },
   "sp500_latest": {
-    "date": "2026-10-30",
-    "close": 7580.07
+    "date": "2026-11-02",
+    "close": 7541.4
   },
   "summary": {
-    "en": "Trump Code Daily Report -- 2026-11-01\nPosts today: 18 | Models triggered: 0\nSignals: None\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 91.7% (11/12)\nLatest post: RT: https://truthsocial.com/users/realDonaldTrump/statuses/117541971048661320TO THE GREAT PEOPLE OF ",
-    "zh": "川普密碼每日報告 -- 2026-11-01\n今日推文: 18 篇 | 觸發模型: 0 組\n偵測信號: 無\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 91.7% (11/12)\n最新推文: RT: https://truthsocial.com/users/realDonaldTrump/statuses/117541971048661320TO THE GREAT PEOPLE OF ",
-    "ja": "トランプ・コード日次レポート -- 2026-11-01\n本日の投稿: 18件 | トリガーモデル: 0組\n検出シグナル: なし\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 91.7% (11/12)\n最新投稿: RT: https://truthsocial.com/users/realDonaldTrump/statuses/117541971048661320TO THE GREAT PEOPLE OF "
+    "en": "Trump Code Daily Report -- 2026-11-02\nPosts today: 63 | Models triggered: 0\nSignals: IRAN\nConsensus: 0 LONG vs 0 SHORT\nHistorical hit rate: 91.7% (11/12)\nLatest post: TO THE GREAT PEOPLE OF GEORGIA, GET OUT AND VOTE FOR:– Mike Collins for U.S. Senate– Rick Jackson fo",
+    "zh": "川普密碼每日報告 -- 2026-11-02\n今日推文: 63 篇 | 觸發模型: 0 組\n偵測信號: 伊朗\n共識方向: 0 組看多 vs 0 組看空\n歷史命中率: 91.7% (11/12)\n最新推文: TO THE GREAT PEOPLE OF GEORGIA, GET OUT AND VOTE FOR:– Mike Collins for U.S. Senate– Rick Jackson fo",
+    "ja": "トランプ・コード日次レポート -- 2026-11-02\n本日の投稿: 63件 | トリガーモデル: 0組\n検出シグナル: イラン\nコンセンサス: 0組ロング vs 0組ショート\n過去の的中率: 91.7% (11/12)\n最新投稿: TO THE GREAT PEOPLE OF GEORGIA, GET OUT AND VOTE FOR:– Mike Collins for U.S. Senate– Rick Jackson fo"
   },
   "triggered_rules_sample": []
 }
